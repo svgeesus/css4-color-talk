@@ -173,8 +173,19 @@
         <section class="slide" id="white-adapt">
             <!-- as example of how the brain processes things -->
             <h1>What color is white?</h1>
-            <img src="img/tungsten.jpg" alt="white paper under tungsten light" style="height: 80vh" />
+            <div class="figure" style="margin-left:auto; margin-right: auto; text-align: center;">
+                <img src="img/tungsten.jpg" alt="white paper under tungsten light" style="height: 80vh" />
+            </div>
         </section>
+
+        <section class="slide dark" id="white-adapt-viral">
+            <!-- as example of how the brain processes things -->
+            <h1>What color is white?</h1>
+            <div class="figure" style="margin-left:auto; margin-right: auto; text-align: center;">
+                <img src="img/dress-blue-black-white-gold.jpg" alt="the famous dress" style="height: 80vh" />
+            </div>
+        </section>
+
 
         <section class="dark slide definition" id="colordef">
             <dl>
@@ -215,7 +226,7 @@
             <section class="slide" data-import="retinal-response"></section>
 
             <section class="slide dark split-definition" id="nonspectral-match">
-                <dl class="delayed">
+                <dl>
                     <dt>Visual match</dt>
                     <dd>Two colors that <em>look identical</em> can have <strong>wildly different spectra</strong></dd>
                 </dl>
@@ -246,9 +257,9 @@
             <section class="slide dark definition" id="XYZ">
                 <dl>
                     <dt>CIE XYZ</dt>
-                    <dd>Gets rid of the <em>negative numbers</em></dd>
-                    <dd>Y is the <em>luminous efficiency function</em></dd>
-                    <dd><strong>Additive</strong> colorspace</dd>
+                    <dd class="delayed">Gets rid of the <em>negative numbers</em></dd>
+                    <dd class="delayed">Y is the <em>luminous efficiency function</em></dd>
+                    <dd class="delayed"><strong>Additive</strong> colorspace</dd>
                 </dl>
             </section>
 
@@ -258,7 +269,7 @@
                 <!-- 
                   Luminance gradient, showing colors bunched up. Does not account for white adaptation. Opponent colors hard to see. Absolute values awkward. Not perceptually uniform.-->
                 <img class="split-image" src="img/Y-gradient.svg" alt="Luminance gradient" />
-                <dl class="delayed">
+                <dl class="delayed-children">
                     <dt>XYZ issues</dt>
                     <dd>Not <strong>perceptually uniform</strong></dd>
                     <dd><strong>White adaptation</strong> not handled</dd>
@@ -305,7 +316,7 @@
           -->
 
             <section class="slide white" id="CIE-CH">
-                <h1>CIE Hue, Chroma</h1>
+                <h1>CIE Hue, Chroma (LCH)</h1>
                 <p style="margin-left:auto; margin-right: auto; text-align: center;"><img src="img/Cielab-circle.png"></p>
             </section>
 
