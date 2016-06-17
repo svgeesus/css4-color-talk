@@ -198,7 +198,9 @@
     color: black;
 }
 
-#topics li:nth-of-type(n+3) {
+#topics li:nth-of-type(2),
+#topics li:nth-of-type(4),
+#topics li:nth-of-type(5) {
     color: white;
 }
 
