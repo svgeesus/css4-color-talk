@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 16px">
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>The Evolution of CSS4 Color</title>
+    <link href="../csss/slideshow.css" rel="stylesheet" />
+    <link href="../csss/reusable.css" rel="stylesheet" />
+    <link href="theme.css" rel="stylesheet" />
+    <link href="talk.css" rel="stylesheet" />
+    <script src="../prefixfree/prefixfree.min.js"></script>
+
+</head>
+
+<body class="language-css">
+
+    <section id="for-browser" class="dark slide">
+        <h1>Important</h1> This slide deck was created for use in a controlled environment, during a talk. It works best with a recent Firefox at 1920x1080. It WILL PROBABLY NOT work correctly in other browsers, due to limited support for CSS3 font-variant-* properties
+        and css variables at this time. But the other browsers will catch up. Right? Right??!!
+    </section>
+
+    <header id="intro" class="slide">
+        <h1>
+		The Evolution
+     of <strong>CSS4 Color</strong>
+  
+	</h1>
+        <h2><a href="http://svgees.us">Chris Lilley</a> <a href="http://twitter.com/svgeesus" 
+	class="twitter">@svgeesus</a></h2>
+        <p class="attribution"></p>
+    </header>
+
+    <section id="#intro">
+        <section class="slide activity" id="hi">
+            <img id="mypic" src="img/chris-av.jpg" alt="me">
+            <p>Hello! <br /><span class="de-emphasize">I’m Chris or @svgeesus</span></p>
+        </section>
+
+        <section class="slide activity" id="w3c">
+            <img src="img/w3c-logo.svg" />
+            <p><a href="http://www.w3.org/People/#clilley">Technical Director at W3C <br /><span class="de-emphasize">(Interaction Domain)</span></a></p>
+        </section>
+
+        <section class="slide activity" id="svg">
+            <img src="img/svg-logo.svg" />
+            <p><a href="http://www.w3.org/Graphics/SVG/WG/wiki/Secret_Origin_of_SVG#Drivers_and_Deployment">Started SVG <span class="de-emphasize">(1996)</span></a></p>
+            <p><a href="http://www.w3.org/2001/12/tag-pressrelease.html.en">SVG WG Chair <span class="de-emphasize">(1998-2006)</span></a></p>
+        </section>
+
+        <section class="slide activity" id="png">
+            <img src="img/png-icon.png" />
+            <p><a href="http://www.w3.org/TR/PNG/">Co-authored PNG <span class="de-emphasize">(1996)</span></a></p>
+        </section>
+
+        <section class="slide activity" id="webfonts">
+            <h1><span class="web">Web</span>Fonts</h1>
+            <ul>
+                <li>Fonts WG Chair <span class="de-emphasize">(1996-1998)</span></li>
+                <!-- all Member-only, sadly -->
+                <li><a href="http://www.w3.org/Fonts/WG/">WOFF 1.0, WOFF 2.0</a></li>
+                <li><a href="https://www.w3.org/community/svgopentype/">Chromatic Fonts</a></li>
+            </ul>
+        </section>
+
+        <section class="slide activity" id="css">
+            <img src="img/woolly.svg" />
+
+            <ul>
+                <li>CSS WG: <a href="https://lists.w3.org/Archives/Member/w3c-ac-members/2001JulSep/0007.html">Chair <span class="de-emphasize">(1997-2002)</span></a>, Staff contact</li>
+                <li><a href="http://www.w3.org/TR/REC-CSS2/">CSS2 co-editor <span class="de-emphasize">(@font-face, descriptors)</span></a></li>
+                <li><a href="http://www.w3.org/TR/css3-color/">CSS3 Color co-editor</a></li>
+                <li><a href="http://www.w3.org/TR/css3-color/">CSS4 Color co-editor</a></li>
+            </ul>
+        </section>
+
+        <!-- end of hello -->
+    </section>
+
+    <section class="slide darker" id="topics">
+        <h1>Topics for today</h1>
+        <ul class="delayed-children">
+            <!-- filled via js -->
+        </ul>
+    </section>
+
+    <section>
+        <header class="image slide" style="background-image: url(img/Dispersive_Prism_Illustration_by_Spigget.jpg);" id="basics">
+            <h1>Basics</h1>
+        </header>
+
+        <section class="dark slide split-definition" id="light">
+            <img class="split-image" src="img/Dispersive_Prism_Illustration_by_Spigget_crop.jpg" alt="prism" />
+            <!--
+				<p class="attribution"></p>
+				-->
+            <dl class="delayed">
+                <dt>Light</dt>
+                <dd>wavelengths visible <span title="human">to humans</span></dd>
+            </dl>
+        </section>
+
+        <section class="slide dark">
+            <h1>Visible spectrum</h1>
+            <div class="figure" style="margin-left:auto; margin-right: auto; text-align: center; margin-top:18vh">
+                <img src="img/Linear_visible_spectrum.svg" style="width:90vw" alt="visible spectrum" />
+            </div>
+        </section>
+
+        <section class="image slide top-heavy" style="background-image: url(img/Blausen_0388_Eye.png);" id="eye">
+            <h1>Human eye</h1>
+        </section>
+
+        <section class="slide white" id="retinal-cells">
+            <h1>Rods &amp; cones</h1>
+            <div class="figure" style="margin-left:auto; margin-right: auto; text-align: center;">
+                <img src="img/rod.svg" alt="a retinal rod cell" style="height:80vh" />
+                <img src="img/cone.svg" alt="a retinal cone cell" style="height:80vh" />
+                <img src="img/cone.svg" alt="a retinal cone cell" style="height:80vh" />
+                <img src="img/cone.svg" alt="a retinal cone cell" style="height:80vh" />
+            </div>
+        </section>
+
+        <section class="slide white" id="retinal-response">
+            <h1>Cone responses</h1>
+            <div class="figure" style="margin-left:auto; margin-right: auto; text-align: center;">
+                <img src="img/cones_norm_bolder.svg" alt="cone responses" style="height:80vh" />
+            </div>
+        </section>
+
+
+        <section class="slide white" id="retinal-response-log">
+            <h1>Cone responses (log scale)</h1>
+            <div class="figure" style="margin-left:auto; margin-right: auto; text-align: center;">
+                <img src="img/cones_log.svg" alt="cone responses" style="height:80vh" />
+            </div>
+        </section>
+
+        <section class="image slide top-heavy" style="background-image: url(img/Gray728.svg);" id="brain">
+            <h1>Human brain</h1>
+        </section>
+
+        <!-- as an example of how the retina processes things -->
+        <section class="slide white" id="opponent">
+            <h1>Opponent colors</h1>
+            <!--Bright reddish shape with black focussing dot, change to white, people see the opponent color. Do again with bright yellow. Explain how there is no reddish-green or bluish-yellow. Maybe split to two slides, second one with gradients?-->
+            <div class="figure" style="margin-left:auto; margin-right: auto; text-align: center;">
+                <img class="split-image" src="img/lab-40-50-0.svg" style="height:80vh" />
+            </div>
+        </section>
+
+        <section class="slide white" id="opponent2">
+            <h1>Opponent colors</h1>
+            <div class="figure" style="margin-left:auto; margin-right: auto; text-align: center;">
+                <img class="split-image" src="img/dot.svg" style="height:80vh" />
+            </div>
+        </section>
+
+        <section class="slide white" id="opponent3">
+            <h1>Opponent colors</h1>
+            <div class="figure" style="margin-left:auto; margin-right: auto; text-align: center;">
+                <img class="split-image" src="img/lab-40-0--48.svg" style="height:80vh" />
+            </div>
+        </section>
+
+        <section class="slide white" id="opponent4">
+            <h1>Opponent colors</h1>
+            <div class="figure" style="margin-left:auto; margin-right: auto; text-align: center;">
+                <img class="split-image" src="img/dot.svg" style="height:80vh" />
+            </div>
+        </section>
+
+        <section class="slide" id="white-adapt">
+            <!-- as example of how the brain processes things -->
+            <h1>What color is white?</h1>
+            <img src="img/tungsten.jpg" alt="white paper under tungsten light" style="height: 80vh" />
+        </section>
+
+        <section class="dark slide definition" id="colordef">
+            <dl>
+                <dt>Color</dt>
+                <dd style="margin-left:10%; margin-right:10%">a <strong>subjective sensation</strong> in the <em>human brain</em> caused by <em>visible light</em> acting on the <em>human eye</em></dd>
+            </dl>
+        </section>
+
+        <section class="slide" id="whaaaat">
+            <h1>Whaaaat?</h1>
+            <div class="delayed">
+                <p>Color is all subjective?</p>
+            </div>
+            <div class="delayed">
+                <p>So we need, like, spectral data! <span class="delayed">And electrodes in the brain 
+                    and and and</span> <em class="delayed">(collapses, sobbing)</em></p>
+            </div>
+            <div class="delayed" style="color:--orange">
+                <p>Science to the rescue!</p>
+            </div>
+        </section>
+
+
+        <!-- end of basics -->
+
+        <section>
+            <header class="image slide" style="background-image: url(img/Quantum_Dots.jpg);" id="measurement">
+                <h1>Measurement</h1>
+            </header>
+
+            <section class="slide dark" id="lumious-efficiency">
+                <h1>Brightness varies by wavelength</h1>
+                <div class="figure" style="margin-left:auto; margin-right: auto; text-align: center;">
+                    <img src="img/vvdash.svg" alt="luminous efficiency function" style="height:80vh" />
+                </div>
+            </section>
+
+            <section class="slide" data-import="retinal-response"></section>
+
+            <section class="slide dark split-definition" id="nonspectral-match">
+                <dl class="delayed">
+                    <dt>Visual match</dt>
+                    <dd>Two colors that <em>look identical</em> can have <strong>wildly different spectra</strong></dd>
+                </dl>
+                <dl class="delayed">
+                    <dt>Color</dt>
+                    <dd>Can be defined with just <strong>three numbers</strong>. Full <em>spectral data</em> is not needed.</dd>
+                </dl>
+            </section>
+
+            <!-- omit, figure broken, not clear why. re-do from mixerm.eps 
+            <section class="slide white" id="colmatch">
+                <h1>Color matching</h1>
+                <div class="figure" style="margin-left:auto; margin-right: auto; text-align: center;">
+                    <img src="img/mixerm-oneside.svg" alt="color mixing" style="height:80vh" />
+                </div>
+            </section>
+            -->
+
+            <section class="slide white" id="colmatch2">
+
+                <h1>Color matching</h1>
+
+                <div class="figure" style="margin-left:auto; margin-right: auto; text-align: center;">
+                    <img src="img/mixerm.svg" alt="color mixing" style="height:80vh" />
+                </div>
+            </section>
+
+            <section class="slide dark definition" id="XYZ">
+                <dl>
+                    <dt>CIE XYZ</dt>
+                    <dd>Gets rid of the <em>negative numbers</em></dd>
+                    <dd>Y is the <em>luminous efficiency function</em></dd>
+                    <dd><strong>Additive</strong> colorspace</dd>
+                </dl>
+            </section>
+
+
+
+            <section class="slide dark split-definition" id="XYZissues">
+                <!-- 
+                  Luminance gradient, showing colors bunched up. Does not account for white adaptation. Opponent colors hard to see. Absolute values awkward. Not perceptually uniform.-->
+                <img class="split-image" src="img/Y-gradient.svg" alt="Luminance gradient" />
+                <dl class="delayed">
+                    <dt>XYZ issues</dt>
+                    <dd>Not <strong>perceptually uniform</strong></dd>
+                    <dd><strong>White adaptation</strong> not handled</dd>
+                </dl>
+            </section>
+
+            <!-- end of measurement section -->
+        </section>
+
+        <section>
+            <header class="image slide" style="background-image: url(img/Cielab-circle.png);" id="cielab">
+                <h1>CIE Lab</h1>
+            </header>
+
+            <section class="slide" id="CIE-L">
+                <h1>CIE Lightness (L)</h1>
+                <p style="margin-top: 18vh; margin-left:auto; margin-right: auto; text-align: center;">
+                    <img src="img/L-gradient.svg" alt="Luminance scale" style="width:90vw" />
+                </p>
+            </section>
+
+            <section class="slide" id="CIE-Y">
+                <h1>CIE Luminance (Y)</h1>
+                <p style="margin-top: 18vh; margin-left:auto; margin-right: auto; text-align: center;">
+                    <img src="img/Y-gradient.svg" alt="Luminance scale" style="width:90vw" />
+                </p>
+            </section>
+
+            <section class="slide dark" id="CIE-ab">
+                <h1>CIE a &amp; b</h1>
+
+                <p style="margin-top: 8vh; margin-left:auto; margin-right: auto; text-align: center;">
+                    <img src="img/Lab-a.svg" alt="Lab a scale" style="width:80vw" />
+                    <img src="img/Lab-b.svg" alt="Lab b scale" style="width:80vw" />
+
+                </p>
+            </section>
+
+            <!-- add if time for diagram
+            <section class="slide incomplete" id="CIE-Lab">
+                <h1>CIE Lab</h1>
+                <p>Diagram of 3D Lab</p>
+            </section>
+          -->
+
+            <section class="slide white" id="CIE-CH">
+                <h1>CIE Hue, Chroma</h1>
+                <p style="margin-left:auto; margin-right: auto; text-align: center;"><img src="img/Cielab-circle.png"></p>
+            </section>
+
+            <section class="slide " id="HSLvsLCH">
+                <h1>What about HSL?</h1>
+                <p style="margin-left:auto; margin-right: auto; text-align: center;">
+                    <img src="img/hsl.svg" alt="HSL diagram" style="height:80vh" />
+                </p>
+            </section>
+
+            <!-- end of cielab section -->
+        </section>
+
+        <section>
+            <header class="image white slide" style="background-image: url(img/Spyder4Elite_calibrating.jpg); background-position: 50% 50%; background-repeat: no-repeat" id="displays">
+                <h1>Color displays</h1>
+            </header>
+
+            <section class="slide dark definition" id="display-characterization">
+                <dl>
+                    <dt>Characterization</dt>
+                    <dd><em>Measure the color</em> of <strong>red</strong>, <strong>green</strong> &amp; <strong>blue</strong> primaries at <em>different intensities</em>.</dd>
+                </dl>
+            </section>
+
+            <section class="slide dark definition" id="display-calibration">
+                <dl>
+                    <dt>Calibration</dt>
+                    <dd><em>Correct imbalances</em> to give <strong>neutral grays</strong>,
+                        <strong>known whitepoint</strong></dd>
+                </dl>
+            </section>
+
+            <section class="slide dark definition" id="display-gamut">
+                <dl>
+                    <dt>Gamut</dt>
+                    <dd>The <em>range of colors</em> that can be <strong>correctly displayed</strong>.</dd>
+                </dl>
+            </section>
+
+            <section class="slide dark gamut" id="sRGB-gamut">
+                <h1>sRGB gamut</h1>
+                <iframe src="img/sRGB_x3d.html"></iframe>
+            </section>
+
+            <section class="slide dark gamut" id="mba-gamut">
+                <h1>2013 MacBook Air</h1>
+                <iframe src="img/MBA2013.x3d.html"></iframe>
+            </section>
+
+            <section class="slide dark gamut" id="dcip3-gamut">
+                <h1>DCI P3 gamut</h1>
+                <iframe src="img/dcip3_x3d.html"></iframe>
+            </section>
+
+        </section>
+        <!-- end of displays section -->
+
+        <section>
+            <header class="image white slide" style="background-image: url(img/4screens.svg); background-position: 50% 50%; background-repeat: no-repeat" id="cmyk">
+                <h1>CMYK</h1>
+            </header>
+
+            <section class="slide dark definition" id="print-characterization">
+                <dl>
+                    <dt>Characterization</dt>
+                    <dd><em>Measure the color</em> of <em>many hundreds 
+                      of combinations</em> of <strong>cyan</strong>,
+                        <strong>magenta</strong>, <strong>yellow</strong> &amp;
+                        <strong>black</strong> primaries.</dd>
+                </dl>
+            </section>
+
+            <section class="slide image" style="background-image: url(img/patches.jpg);">
+                <h1>Color patches</h1>
+            </section>
+
+            <section class="slide dark definition" id="print-calibration">
+                <dl>
+                    <dt>Calibration</dt>
+                    <dd>Given a color, do <em>4D interpolation</em> on the <strong>nearest measured patch values</strong>.
+                        <dd>Result is <strong>neutral grays</strong>,
+                            <strong>accurate colors</strong></dd>
+                </dl>
+            </section>
+
+            <section class="slide dark definition" id="ICC-profiles">
+                <dl>
+                    <dt>ICC profiles</dt>
+                    <dd>Store the <em>characterization data</em> of a device, allowing
+                        <em>conversion</em> to a <strong>profile connection space</strong> (XYZ or Lab).</dd>
+                </dl>
+            </section>
+
+        </section>
+
+        <!-- end of cmyk section -->
+
+        <section>
+            <header class="image white slide" style="background-image: url(img/woolly.svg);" id="css4color">
+                <h1>CSS4 Color</h1>
+            </header>
+
+            <section class="slide" id="css4color-lab">
+                <h1>Lab in CSS Color 4</h1>
+                <pre style="margin-top:12vh"><code class="language-css" >background: lab(50 0 0);
+border-color: lab(65 46 -8, 50%);
+color: lab(32 -24.8 14.23, 1, #F06);</code></pre>
+            </section>
+
+            <section class="slide" id="css4color-lch">
+                <h1>LCH in CSS Color 4</h1>
+                <pre style="margin-top:12vh"><code class="language-css">background: lch(50 0 0);
+border-color: lch(65 30 180, 50%);
+color: lch(32 14.23 45, 1, #F06);</code></pre>
+            </section>
+
+            <section class="slide" id="css4color-icc1">
+                <h1>ICC Color in CSS Color 4</h1>
+                <p>Predefined <strong>dci-p3</strong> and <strong>rec2020</strong> wide gamut RGB spaces</p>
+                <pre style="margin-top:12vh"><code class="language-css">background: color(dci-p3, 255 0 127);
+background: color(dci-p3, 64 48 96, 33%);</code></pre>
+            </section>
+
+            <section class="slide" id="css4color-icc2">
+                <h1>ICC Color in CSS Color 4</h1>
+                <p>At-rule (like <em>@font-face</em>) points to ICC profile</p>
+                <pre style="margin-top:12vh"><code class="language-css">background: color(foo, 0 206 190 77);
+@color-profile foo {
+    src: url('http://example.org/fooprinter-coated.icc');}</code></pre>
+            </section>
+
+
+            <section class="slide split-definition" id="caniuse">
+                <h1>Can I use it?</h1>
+                <dl class="delayed">
+                    <dt>No.</dt>
+                    <dd>This is <em>not</em> in the browsers yet</dd>
+                </dl>
+
+                <dl class="delayed">
+                    <dt>Shhhh!!!</dt>
+                    <dd><strong>First Public Working Draft</strong>, Tues 21 June 2016 </dd>
+                </dl>
+                <!-- end of css4 color section -->
+            </section>
+
+
+            <!--
+            <section class="slide credits" id="image-credits">
+                <h1>Image credits</h1>
+                <dl>
+                    <dt><a href="https://www.flickr.com/photos/davepc/6883820262/">Typography I/Helvetica</a></dt>
+                    <dd>David Costa, cc-by-nc</dd>
+                    <dt><a href="https://www.flickr.com/photos/fontshop/4134128747/">Periodic Table of Font Elements 1.1</a></dt>
+                    <dd>FontShop, cc-by</dd>
+                    <dt><a href="https://www.flickr.com/photos/zachheller/5116640316/">Speedometer</a></dt>
+                    <dd>Zach Heller, cc-by</dd>
+                    <dt><a href="https://www.flickr.com/photos/stinkiepinkie_infinity/2620802106/">Crystal Ball</a></dt>
+                    <dd>Shawn Perez, cc-by</dd>
+                    <dt><a href="https://www.flickr.com/photos/jcolman/2794559035/">Wooden type blocks at Fremont indoor Sunday market</a></dt>
+                    <dd>Jonathon Colman, cc-by-nc-nd</dd>
+                    <dt><a href="https://commons.wikimedia.org/wiki/File:12th-century_painters_-_Manuscript_of_Church_Law_-_WGA15726.jpg">Manuscript of Church Law</a></dt>
+                    <dd>Unknown Miniaturist, English (active 1120s in Canterbury). Public domain.</dd>
+                    <dt><a href="http://emojiparty.club">Emoji Party</a></dt>
+                    <dd>Charlie Clarke (linked with an iframe)</dd>
+                </dl>
+            </section>
+            -->
+
+            <footer class="dark slide" id="goodbye">
+                <img src="img/chris-av.jpg" alt="me" />
+                <h1>Thank you!</h1>
+                <ul>
+                    <li><a href="mailto:chris@w3.org">chris@w3.org</a></li>
+                    <li><a href="http://svgees.us">svgees.us</a></li>
+                    <li><a href="http://twitter.com/svgeesus">@svgeesus</a></li>
+                </ul>
+                <p>Slides: <a href="https://github.com/svgeesus/evol-css4-color/">github.com/svgeesus/css4-color-talk/</a></p>
+                <p style="font-size: 50%;">CSS Slideshow framework by Lea Verou: <a href="http://github.com/LeaVerou/CSSS">github.com/LeaVerou/CSSS</a></p>
+            </footer>
+
+
+
+            <script src="../csss/slideshow.js"></script>
+            <script src="prism.js"></script>
+            <script src="../csss/plugins/css-edit.js"></script>
+            <script src="../csss/plugins/css-snippets.js"></script>
+            <script src="../csss/plugins/css-controls.js"></script>
+            <script src="../incrementable/incrementable.js"></script>
+
+            <script src="talk.js"></script>
+
+</body>
+
+</html>

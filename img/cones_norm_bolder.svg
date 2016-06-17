@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="284 226 532 373">
+  <defs>
+    <style>
+      .a, .c, .d, .e {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+      }
+
+      .a {
+        stroke-width: 0.25px;
+      }
+
+      .b {
+        font-size: 10.75px;
+        fill: #1d1d1b;
+        font-family: Helvetica Neue;
+      }
+
+      .c, .d, .e {
+        stroke-width: 2px;
+      }
+
+      .c {
+        stroke-dasharray: 3 3.75;
+        stroke: #DD2;
+      }
+
+      .d {
+        stroke-dasharray: 10 5;
+        stroke: #9D3
+      }
+      .e {
+        stroke: #62F;
+      }
+    </style>
+  </defs>
+  <title>cones_norm_bolder</title>
+  <g>
+    <path class="a" d="M88.5,535.49h460.25m-460.25,0v-302m0,302v-2.5m76.75,2.5v-2.5m76.75,2.5v-2.5m76.5,2.5v-2.5m76.75,2.5v-2.5m76.75,2.5v-2.5m76.75,2.5v-2.5M88.5,535.49v-5m153.5,5v-5m153.25,5v-5m153.5,5v-5" transform="translate(244 18.044)"/>
+    <text class="b" transform="translate(320.357 566.034)">400.0</text>
+    <text class="b" transform="translate(473.857 566.034)">500.0</text>
+    <text class="b" transform="translate(627.107 566.034)">600.0</text>
+    <text class="b" transform="translate(780.607 566.034)">700.</text>
+    <text class="b" transform="translate(799.373 566.034)">0</text>
+    <text class="b" transform="translate(523.717 580.534)">Wavelength (nm)</text>
+    <path class="a" d="M88.5,535.49H91m-2.5-37.75H91m-2.5-37.75H91m-2.5-37.75H91m-2.5-37.75H91m-2.5-37.75H91m-2.5-37.75H91m-2.5-37.75H91m-2.5-37.75H91m-2.5,302h5m-5-75.5h5m-5-75.5h5m-5-75.5h5m-5-75.5h5" transform="translate(244 18.044)"/>
+    <text class="b" transform="translate(312.248 557.034)">0.</text>
+    <text class="b" transform="translate(319.982 557.034)">0</text>
+    <text class="b" transform="translate(312.248 481.534)">0.</text>
+    <text class="b" transform="translate(319.982 481.534)">2</text>
+    <text class="b" transform="translate(312.248 406.034)">0.</text>
+    <text class="b" transform="translate(319.982 406.034)">4</text>
+    <text class="b" transform="translate(312.248 330.534)">0.</text>
+    <text class="b" transform="translate(319.982 330.534)">6</text>
+    <text class="b" transform="translate(312.248 255.042)">0.</text>
+    <text class="b" transform="translate(319.982 255.042)">8</text>
+    <text class="b" transform="translate(302.998 443.8) rotate(-90)">Relative sensitivity</text>
+    <polyline class="c" points="332.498 553.284 347.998 552.784 363.248 551.534 378.498 550.284 393.998 549.034 409.248 547.784 424.498 545.784 439.998 540.284 455.248 530.284 470.498 515.534 501.248 452.034 531.998 367.784 547.248 341.284 562.498 324.284 577.998 314.784 593.248 313.784 608.748 321.534 623.998 338.534 639.248 362.534 654.748 392.534 669.998 426.034 685.248 462.284 700.748 492.034 715.998 515.534 731.248 531.784 746.748 542.034 761.998 547.534 777.248 550.784 792.748 552.284"/>
+    <polyline class="d" points="332.498 553.534 347.998 553.034 363.248 552.034 378.498 550.784 393.998 548.534 409.248 546.034 424.498 542.534 439.998 535.784 455.248 526.534 470.498 514.534 501.248 465.784 531.998 414.284 547.248 406.034 562.498 407.534 577.998 417.034 593.248 434.284 608.748 457.284 623.998 483.034 639.248 506.534 654.748 525.034 669.998 537.284 685.248 545.034 700.748 549.284 715.998 551.534 731.248 552.534 746.748 553.284 761.998 553.534 777.248 553.534 792.748 553.534"/>
+    <polyline class="e" points="332.498 553.284 347.998 552.284 363.248 550.784 378.498 549.534 393.998 549.284 409.248 549.534 424.498 550.034 439.998 550.534 455.248 551.534 470.498 552.534 501.248 553.284 531.998 553.534 547.248 553.534 562.498 553.534 577.998 553.534 593.248 553.534 608.748 553.534 623.998 553.534 639.248 553.534 654.748 553.534 669.998 553.534 685.248 553.534 700.748 553.534 715.998 553.534 731.248 553.534 746.748 553.534 761.998 553.534 777.248 553.534 792.748 553.534"/>
+    <line class="c" x1="363.498" y1="297.034" x2="389.498" y2="297.034"/>
+    <text class="b" transform="translate(395.998 300.534)">L cones</text>
+    <line class="d" x1="363.498" y1="310.534" x2="389.498" y2="310.534"/>
+    <text class="b" transform="translate(395.998 314.034)">M cones</text>
+    <line class="e" x1="363.498" y1="324.034" x2="389.498" y2="324.034"/>
+    <text class="b" transform="translate(395.998 327.542)">S cones</text>
+  </g>
+  <text x="244" y="18.044"/>  
+  <!-- for bbox
+  <rect class="e" x="284" y="226.044" width="532" height="373"/>
+-->
+</svg>

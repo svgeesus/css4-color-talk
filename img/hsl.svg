@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 343.183 326.23">
+  <defs>
+    <style>
+      .a, .b, .c, .d {
+        fill: none;
+      }
+
+      .a {
+        stroke: #ddd;
+      }
+
+      .a, .b, .c, .d, .g, .h, .i, .j, .k, .l, .m, .n {
+        stroke-miterlimit: 11.474;
+      }
+
+      .a, .g, .h, .i, .j, .k, .l, .m, .n {
+        stroke-width: 0.8px;
+      }
+
+      .b, .d, .g, .h, .i, .j, .k, .l, .m, .n {
+        stroke: #1d1d1b;
+      }
+
+      .b, .c {
+        stroke-width: 1.5px;
+      }
+
+      .c {
+        stroke: #bbb;
+      }
+
+      .d {
+        stroke-width: 2px;
+      }
+
+      .e, .f, .h, .o, .p, .q {
+        fill: #1d1d1b;
+      }
+
+      .e, .g, .h, .i, .j, .k, .l, .m, .n {
+        fill-rule: evenodd;
+      }
+
+      .f {
+        font-size: 18px;
+        font-family: Helvetica Neue;
+      }
+
+      .g {
+        fill: #fff;
+      }
+
+      .i {
+        fill: #e30613;
+      }
+
+      .j {
+        fill: #009fe3;
+      }
+
+      .k {
+        fill: #009640;
+      }
+
+      .l {
+        fill: #312783;
+      }
+
+      .m {
+        fill: #ffed00;
+      }
+
+      .n {
+        fill: #e6007e;
+      }
+
+      .o, .p, .q {
+        font-size: 11px;
+        font-family: Helvetica Neue;
+      }
+
+/*
+      .p {
+        letter-spacing: 1px;
+      }
+
+      .q {
+        letter-spacing: 2px;
+      }
+      */
+    </style>
+  </defs>
+  <title>hls</title>
+  <g>
+    <line class="a" x1="170.297" y1="37.98" x2="170.297" y2="291.2"/>
+    <path class="b" d="M304.3,487.98c59.47,0,108,16.13,108,36s-48.53,36-108,36-108-16.13-108-36,48.53-36,108-36h0Zm0-253.73c59.47,0,108,16.13,108,36s-48.53,36-108,36-108-16.13-108-36,48.53-36,108-36h0Zm1.08,131.91c59.47,0,108,16.12,108,36s-48.53,36-108,36-108-16.13-108-36,48.53-36,108-36h0Z" transform="translate(-134 -234)"/>
+    <path class="c" d="M304.3,289.98c59.47,0,108,16.13,108,36s-48.53,36-108,36-108-16.13-108-36,48.53-36,108-36h0Z" transform="translate(-134 -234)"/>
+    <path class="d" d="M283.347,314.68a105.753,105.753,0,0,1,20.88-1.95c21.53,0,39.24,5.62,39.89,12.82" transform="translate(-134 -234)"/>
+    <polygon class="e" points="149.277 78.01 145.097 81.54 150.427 83.05 149.277 78.01 149.277 78.01"/>
+    <line class="d" x1="169.797" y1="92.48" x2="138.117" y2="76"/>
+    <polygon class="e" points="137.317 78.52 134.297 73.98 139.767 73.76 137.317 78.52 137.317 78.52"/>
+    <line class="a" x1="278.297" y1="91.98" x2="169.797" y2="92.48"/>
+    <path class="b" d="M412.3,271.76V524.99m-216-253.23V524.99" transform="translate(-134 -234)"/>
+    <line class="d" x1="170.297" y1="289.98" x2="170.297" y2="96.3"/>
+    <polygon class="e" points="167.637 96.73 170.297 91.98 172.957 96.73 167.637 96.73 167.637 96.73"/>
+    <text class="f" transform="translate(153.344 119.043)">L</text>
+    <text class="f" transform="translate(176.094 74.05)">H</text>
+    <text class="f" transform="translate(115.977 74.05)">S</text>
+    <path class="g" d="M305.377,262.98a9,9,0,1,1-9,9,9.046,9.046,0,0,1,9-9h0Z" transform="translate(-134 -234)"/>
+    <path class="h" d="M304.3,514.98a9,9,0,1,1-9,9,9.046,9.046,0,0,1,9-9h0Z" transform="translate(-134 -234)"/>
+    <path class="i" d="M413.377,393.16a9,9,0,1,1-9,9,9.046,9.046,0,0,1,9-9h0Z" transform="translate(-134 -234)"/>
+    <path class="j" d="M197.377,393.16a9,9,0,1,1-9,9,9.046,9.046,0,0,1,9-9h0Z" transform="translate(-134 -234)"/>
+    <path class="k" d="M252.457,361.98a8.965,8.965,0,1,1-9,8.93,8.986,8.986,0,0,1,9-8.93h0Z" transform="translate(-134 -234)"/>
+    <path class="l" d="M249.217,425.99a8.965,8.965,0,1,1-9,8.93,8.986,8.986,0,0,1,9-8.93h0Z" transform="translate(-134 -234)"/>
+    <path class="m" d="M360.387,362.99a8.965,8.965,0,1,1-9,8.93,8.992,8.992,0,0,1,9-8.93h0Z" transform="translate(-134 -234)"/>
+    <path class="n" d="M357.647,425.2a8.96,8.96,0,1,1-9,8.92,8.984,8.984,0,0,1,9-8.92h0Z" transform="translate(-134 -234)"/>
+    <text class="o" transform="translate(314.242 167.636)">Red</text>
+    <text class="o" transform="translate(299.844 138.839)">Yellow</text>
+    <text class="p" transform="translate(299.844 203.628)">Magenta</text>
+    <text class="q" transform="translate(0 167.636)">Cyan</text>
+    <text class="q" transform="translate(10.078 138.839)">Green</text>
+    <text class="o" transform="translate(20.516 203.628)">Blue</text>
+    <text class="p" transform="translate(191.859 30.855)">White</text>
+    <text class="o" transform="translate(191.859 304.418)">Black</text>
+  </g>
+</svg>

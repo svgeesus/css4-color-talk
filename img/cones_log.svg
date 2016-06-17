@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="1 1 548 358">
+  <defs>
+    <style>
+      .a, .c, .d, .e, .f, .g {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+      }
+
+      .a, .f, .g {
+        stroke-width: 0.25px;
+      }
+
+      .b {
+        font-size: 10.75px;
+        fill: #1d1d1b;
+        font-family: Helvetica Neue;
+      }
+
+      .c, .d, .e {
+        stroke-width: 2px;
+      }
+
+      .c, .f {
+        stroke-dasharray: 3 3.75;
+      }
+
+      .c {
+        stroke: #DD2;
+      }
+      .d {
+        stroke: #9D3
+      }
+      .e {
+        stroke: #62F;
+      }
+      .d, .g {
+        stroke-dasharray: 10 5;
+      }
+    </style>
+  </defs>
+  <title>cones_log</title>
+  <g>
+    <path class="a" d="M93.248,535.74H553.5m-460.25,0V233.49m0,302.25v-2.5m76.75,2.5v-2.5m76.75,2.5v-2.5m76.5,2.5v-2.5m76.75,2.5v-2.5m76.75,2.5v-2.5m76.75,2.5v-2.5m-460.25,2.5v-5m153.5,5v-5m153.25,5v-5m153.5,5v-5" transform="translate(-31 -211)"/>
+    <text class="b" transform="translate(50.107 337.248)">400.0</text>
+    <text class="b" transform="translate(203.607 337.248)">500.0</text>
+    <text class="b" transform="translate(356.857 337.248)">600.0</text>
+    <text class="b" transform="translate(510.357 337.248)">700.</text>
+    <text class="b" transform="translate(529.123 337.248)">0</text>
+    <text class="b" transform="translate(253.467 351.74)">Wavelength (nm)</text>
+    <path class="a" d="M93.248,535.74h2.5m-2.5-30.25h2.5m-2.5-30.25h2.5m-2.5-30.25h2.5m-2.5-30.25h2.5m-2.5-30.25h2.5m-2.5-30h2.5m-2.5-30.25h2.5m-2.5-30.25h2.5m-2.5-30.25h2.5m-2.5-30.25h2.5m-2.5,302.25h5m-5-60.5h5m-5-60.5h5m-5-60.25h5m-5-60.5h5m-5-60.5h5" transform="translate(-31 -211)"/>
+    <text class="b" transform="translate(38.693 328.24)">-5.0</text>
+    <text class="b" transform="translate(38.693 267.74)">-4.0</text>
+    <text class="b" transform="translate(38.693 207.248)">-3.0</text>
+    <text class="b" transform="translate(38.693 146.99)">-2.0</text>
+    <text class="b" transform="translate(38.693 86.49)">-1.0</text>
+    <text class="b" transform="translate(41.998 25.998)">0.</text>
+    <text class="b" transform="translate(49.732 25.998)">0</text>
+    <text class="b" transform="translate(21.998 223.506) rotate(-90)">Log relative sensitivity</text>
+    <polyline class="c" points="62.248 204.99 77.748 180.24 92.998 158.49 108.248 146.99 123.748 137.74 138.998 131.74 154.248 124.24 169.748 110.49 184.998 95.74 200.248 82.74 230.998 56.99 261.748 41.24 276.998 37.74 292.248 35.74 307.748 34.49 322.998 34.49 338.498 35.49 353.748 37.49 368.998 40.49 384.498 44.99 399.748 50.99 414.998 59.74 430.498 70.24 445.748 82.74 460.998 97.24 476.498 113.99 491.748 130.49 506.998 149.49 522.498 167.74"/>
+    <polyline class="d" points="62.248 218.99 77.748 191.99 92.998 166.99 108.248 149.74 123.748 135.24 138.998 124.74 154.248 114.74 169.748 102.49 184.998 91.74 200.248 82.24 230.998 60.74 261.748 48.74 276.998 47.24 292.248 47.49 307.748 49.24 322.998 52.74 338.498 58.49 353.748 66.49 368.998 77.24 384.498 90.24 399.748 104.99 414.998 121.74 430.498 139.49 445.748 158.24 460.998 176.74 476.498 196.49 491.748 214.74 506.998 234.49 522.498 253.49"/>
+    <polyline class="e" points="62.248 197.49 77.748 171.99 92.998 149.99 108.248 141.49 123.748 138.99 138.998 141.49 154.248 144.99 169.748 148.74 184.998 158.99 200.248 172.74 230.998 200.49 261.748 235.49 276.998 253.49 292.248 277.49 307.748 295.74 322.998 306.49 338.498 324.74 353.748 324.74 368.998 324.74 368.998 324.74"/>
+    <line class="f" x1="85.498" y1="32.24" x2="111.498" y2="32.24"/>
+    <text class="b" transform="translate(117.998 35.74)">L cones</text>
+    <line class="g" x1="85.498" y1="45.74" x2="111.498" y2="45.74"/>
+    <text class="b" transform="translate(117.998 49.24)">M cones</text>
+    <line class="a" x1="85.498" y1="59.24" x2="111.498" y2="59.24"/>
+    <text class="b" transform="translate(117.998 62.74)">S cones</text>
+  </g>
+  <!--
+  <rect class="c" x="1" y="1" width="548" height="358"/>
+-->
+</svg>
