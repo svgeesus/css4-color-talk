@@ -1125,8 +1125,13 @@ select {
 .gamut:not(:target) {}
 
 .gamut iframe {
-    height: 70vh;
+    height: 80vh;
     margin: auto;
     display: block;
-    width: 100vh
+    width: 120vh;
+    background: black;
+}
+
+.gamut iframe.p3 {
+    width: 140vh;
 }
