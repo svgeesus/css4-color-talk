@@ -30,4 +30,6 @@ Y =.2	124
 		<stop offset="100%" stop-color="white"/>
 	</linearGradient>
 	<rect x="0" y="0" width="100" height="30" fill="url(#Y)" stroke="black" stroke-width="4"/>
+	<!-- center is Y = 18.4 -->
+	<rect x="16.9" y="-1" width="3" height="32" fill="none" stroke="#E79D5E" stroke-width="0.5"/>
 </svg>

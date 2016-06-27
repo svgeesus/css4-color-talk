@@ -32,4 +32,5 @@ xyY at increments of Y, from Lab 50 0 0
 		<stop offset="100%" stop-color="white"/>
 	</linearGradient>
 	<rect x="0" y="0" width="100" height="30" fill="url(#L)" stroke="black" stroke-width="4"/>
+	<rect x="48.5" y="-1" width="3" height="32" fill="none" stroke="#E79D5E" stroke-width="0.5"/>
 </svg>
