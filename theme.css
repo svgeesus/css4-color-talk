@@ -151,6 +151,11 @@ header.slide {
     color: var(--buff);
 }
 
+.black.slide {
+    background: #000;
+    color: var(--buff);
+}
+
 .white.slide {
     background: white;
     color: var(--darkgrey);

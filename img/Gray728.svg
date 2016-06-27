@@ -1,27 +1,23 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
 <!-- Creator: CorelDRAW -->
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:odm="http://product.corel.com/CGS/11/cddns/" xml:space="preserve" width="1024px" height="731px" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd"
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:odm="http://product.corel.com/CGS/11/cddns/" 
      viewBox="0 0 1024 732">
  <defs>
   <style type="text/css">
    <![CDATA[
-    .str2 {stroke:#000000;stroke-width:2}
-    .str0 {stroke:#000000;stroke-width:2}
-    .str1 {stroke:#000000;stroke-width:4}
-    .str3 {stroke:#000000;stroke-width:2;stroke-dasharray:5 7}
+    .str2 {stroke:#F3D69B;stroke-width:2}
+    .str0 {stroke:#F3D69B;stroke-width:2}
+    .str1 {stroke:#F3D69B;stroke-width:4}
+    .str3 {stroke:#F3D69B;;stroke-width:2;stroke-dasharray:5 7}
     .fil5 {fill:none}
-    .fil6 {fill:#000000}
+    .fil6 {fill:#F3D69B;} // text
     .fil2 {fill:#FFFFFF}
-    .fil1 {fill:#B4D8EC}
-    .fil3 {fill:#B6CF9D}
-    .fil4 {fill:#F7A6B6}
-    .fil0 {fill:#FCFB98}
-    .fnt4 {font-weight:normal;font-size:14;font-family:Arial}
-    .fnt3 {font-weight:normal;font-size:16;font-family:Arial}
-    .fnt2 {font-weight:normal;font-size:18;font-family:Arial}
-    .fnt1 {font-weight:normal;font-size:23;font-family:Arial}
-    .fnt0 {font-weight:normal;font-size:26;font-family:Arial}
+    .fil1 {fill:hsl(160, 18%, 45%);}
+    .fil3 {fill:hsl(160, 18%, 45%);}
+    .fil4 { fill: hsl(15, 65%, 53%);}
+    .fil0 {fill:hsl(160, 18%, 45%);}
+    .fnt1 {font-weight:normal;font-size:28;font-family:Helvetica Neue}
    ]]>
   </style>
  </defs>
@@ -180,17 +176,8 @@
   <path class="fil5 str2" d="M811 527c-52,17 -109,41 -160,65"/>
   <path class="fil5 str2" d="M889 523c-44,14 -223,77 -242,77m-1 -4c75,-31 155,-55 231,-77"/>
   <path class="fil5 str2" d="M891 544c-46,17 -198,56 -234,60 79,-26 156,-47 233,-71"/>
-  <g transform="matrix(0.719985 -0.693989 0.693989 0.719985 -469.453 520.773)">
-   <text x="512" y="366" class="fil6 fnt0">F R O N T A L   L O B E</text>
-  </g>
-  <g transform="matrix(0.99578 -0.0917735 0.0917735 0.99578 -48.5888 -83.9187)">
-   <text x="512" y="366" class="fil6 fnt0">P A R I E T A L   L O B E</text>
-  </g>
-  <g transform="matrix(0.983569 -0.180531 0.180531 0.983569 -173.404 230.777)">
-   <text x="512" y="366" class="fil6 fnt0">T E M P O R A L   L O B E</text>
-  </g>
-  <text x="850" y="371" class="fil6 fnt1">OCCIPITAL</text>
-  <text x="879" y="396" class="fil6 fnt1">LOBE</text>
+  <text x="850" y="371" class="fil6 fnt1">Visual</text>
+  <text x="879" y="396" class="fil6 fnt1">Cortex</text>
   <path class="fil5 str2" d="M669 552c-12,52 -40,56 -72,47 -13,-10 -26,-10 -39,-10"/>
   <path class="fil5 str2" d="M644 598c9,-15 13,-29 15,-44"/>
   <path class="fil5 str2" d="M635 601c9,-12 14,-28 16,-47"/>
@@ -238,21 +225,9 @@
   <path class="fil6" d="M264 547c-4,-28 9,-53 30,-74 23,-18 18,-44 28,-52 14,-27 51,-44 103,-53 16,-19 37,-29 66,-28 20,-17 38,-33 75,-33 2,9 5,18 9,26 -4,-5 -10,-11 -14,-18 -33,-3 -56,16 -69,32 -23,-5 -43,2 -62,24 -53,10 -91,26 -104,53 -7,24 -15,44 -30,52 -17,18 -32,44 -22,82 -3,-3 -6,-8 -10,-11z"/>
   <path class="fil6" d="M567 54c-9,6 -5,21 -11,32 -48,3 -75,21 -66,54 11,13 13,22 6,28 -14,8 -19,29 -24,52 -10,13 -16,34 -16,56 -1,19 -29,30 -25,46 2,0 3,0 4,0 0,-7 4,-14 11,-20 9,-5 13,-17 16,-33 -1,-14 3,-28 14,-43 5,-19 7,-47 27,-56 12,-5 5,-18 -6,-34 -13,-32 22,-40 59,-45 15,-4 11,-28 21,-36 -3,-1 -7,-1 -10,-1z"/>
   <path class="fil5 str0" d="M530 160c-9,-3 -17,-2 -24,4"/>
-  <g transform="matrix(0.399545 -0.916714 0.916714 0.399545 -95.9177 584.036)">
-   <text x="512" y="366" class="fil6 fnt2">CENTRAL  F.</text>
-  </g>
-  <g transform="matrix(0.999195 0.0401273 -0.0401273 0.999195 420.294 -142.785)">
-   <text x="512" y="366" class="fil6 fnt3">OCCIPITAL F.</text>
-  </g>
   <path class="fil5 str2" d="M907 254l13 -8"/>
-  <g transform="matrix(0.930945 -0.36516 0.36516 0.930945 -255.841 264.926)">
-   <text x="512" y="366" class="fil6 fnt2">SYLVIAN  F.</text>
-  </g>
   <path class="fil6" d="M903 251c-7,8 -15,17 -23,25 7,0 16,-5 28,-20l-5 -5z"/>
   <path class="fil6" d="M881 277c-17,14 -34,29 -46,44 -9,12 -10,29 -7,48 2,14 4,28 7,41 4,0 7,0 11,1 16,16 56,13 68,19 7,10 13,17 17,15 7,7 12,15 15,23 -3,-10 3,-10 -18,-34 -9,-9 -30,-14 -63,-19 -23,-8 -28,-22 -30,-40 -4,-17 -6,-33 0,-50 13,-16 29,-32 46,-48z"/>
-  <g transform="matrix(0.931507 0.363722 -0.363722 0.931507 497.459 -133.335)">
-   <text x="512" y="366" class="fil6 fnt4">EXOOCCIPITAL  FF.</text>
-  </g>
   <path class="fil5 str3" d="M567 312l263 41"/>
   <path class="fil6" d="M838 407c3,23 11,44 28,60 34,1 55,20 85,21l-7 7c-14,1 -27,-11 -40,-13 -11,-4 -33,-5 -43,-10 -15,-21 -24,-43 -23,-65z"/>
   <path class="fil5 str3" d="M432 319l23 30"/>

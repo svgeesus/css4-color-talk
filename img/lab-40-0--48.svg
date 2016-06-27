@@ -2,5 +2,5 @@
 	<!-- lab(40 0 -49)-->
 
 	<circle r="80" fill="rgb(16, 97, 173)"/>
-	<circle r="5"	fill="#111"/>
+	<circle r="2"	fill="#111"/>
 </svg>

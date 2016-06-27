@@ -16,8 +16,8 @@
 <body class="language-css">
 
     <section id="for-browser" class="dark slide">
-        <h1>Important</h1> This slide deck was created for use in a controlled environment, during a talk. It works best with a recent Firefox at 1920x1080. It WILL PROBABLY NOT work correctly in other browsers, due to limited support for CSS3 font-variant-* properties
-        and css variables at this time. But the other browsers will catch up. Right? Right??!!
+        <h1>Important</h1> This slide deck was created for use in a controlled environment, during a talk. It works best with a recent Firefox at 1920x1080. It WILL LIKELY NOT work correctly in other browsers, due to limited support for css variables at this time. But
+        the other browsers will catch up. Right? Right??!!
     </section>
 
     <header id="intro" class="slide">
@@ -91,9 +91,7 @@
 
         <section class="dark slide split-definition" id="light">
             <img class="split-image" src="img/Dispersive_Prism_Illustration_by_Spigget_crop.jpg" alt="prism" />
-            <!--
-				<p class="attribution"></p>
-				-->
+
             <dl class="delayed">
                 <dt>Light</dt>
                 <dd>wavelengths visible <span title="human">to humans</span></dd>
@@ -111,8 +109,10 @@
             <h1>Human eye</h1>
         </section>
 
+        <!-- needs a closer tie-in between the retina and the cells in the retina -->
+
         <section class="slide white" id="retinal-cells">
-            <h1>Rods &amp; cones</h1>
+            <h1>Retinal cells: rods &amp; cones</h1>
             <div class="figure" style="margin-left:auto; margin-right: auto; text-align: center;">
                 <img src="img/rod.svg" alt="a retinal rod cell" style="height:80vh" />
                 <img src="img/cone.svg" alt="a retinal cone cell" style="height:80vh" />
@@ -121,7 +121,7 @@
             </div>
         </section>
 
-        <section class="slide white" id="retinal-response">
+        <section class="slide dark" id="retinal-response">
             <h1>Cone responses</h1>
             <div class="figure" style="margin-left:auto; margin-right: auto; text-align: center;">
                 <img src="img/cones_norm_bolder.svg" alt="cone responses" style="height:80vh" />
@@ -129,19 +129,19 @@
         </section>
 
 
-        <section class="slide white" id="retinal-response-log">
+        <section class="slide dark" id="retinal-response-log">
             <h1>Cone responses (log scale)</h1>
             <div class="figure" style="margin-left:auto; margin-right: auto; text-align: center;">
                 <img src="img/cones_log.svg" alt="cone responses" style="height:80vh" />
             </div>
         </section>
 
-        <section class="image slide top-heavy" style="background-image: url(img/Gray728.svg);" id="brain">
+        <section class="image slide bottom-heavy" style="background-image: url(img/Gray728.svg);" id="brain">
             <h1>Human brain</h1>
         </section>
 
         <!-- as an example of how the retina processes things -->
-        <section class="slide white" id="opponent">
+        <section class="slide dark black" id="opponent">
             <h1>Opponent colors</h1>
             <!--Bright reddish shape with black focussing dot, change to white, people see the opponent color. Do again with bright yellow. Explain how there is no reddish-green or bluish-yellow. Maybe split to two slides, second one with gradients?-->
             <div class="figure" style="margin-left:auto; margin-right: auto; text-align: center;">
@@ -156,7 +156,7 @@
             </div>
         </section>
 
-        <section class="slide white" id="opponent3">
+        <section class="slide dark black" id="opponent3">
             <h1>Opponent colors</h1>
             <div class="figure" style="margin-left:auto; margin-right: auto; text-align: center;">
                 <img class="split-image" src="img/lab-40-0--48.svg" style="height:80vh" />
@@ -190,7 +190,8 @@
         <section class="dark slide definition" id="colordef">
             <dl>
                 <dt>Color</dt>
-                <dd style="margin-left:10%; margin-right:10%">a <strong>subjective sensation</strong> in the <em>human brain</em> caused by <em>visible light</em> acting on the <em>human eye</em></dd>
+                <!-- human is implied from earlier -->
+                <dd style="margin-left:20%; margin-right:20%">a <strong>subjective sensation</strong> in the <em> brain</em> caused by <em>visible light</em> acting on the <em> eye</em></dd>
             </dl>
         </section>
 
@@ -216,6 +217,13 @@
                 <h1>Measurement</h1>
             </header>
 
+            <section class="slide dark" id="spectra">
+                <h1>Spectral measurement</h1>
+                <div class="figure" style="margin-left:auto; margin-right: auto; text-align: center;">
+                    <img src="img/fluor_spectrum.svg" alt="luminous efficiency function" style="height:80vh" />
+                </div>
+            </section>
+
             <section class="slide dark" id="lumious-efficiency">
                 <h1>Brightness varies by wavelength</h1>
                 <div class="figure" style="margin-left:auto; margin-right: auto; text-align: center;">
@@ -225,14 +233,10 @@
 
             <section class="slide" data-import="retinal-response"></section>
 
-            <section class="slide dark split-definition" id="nonspectral-match">
+            <section class="slide dark definition" id="nonspectral-match">
                 <dl>
                     <dt>Visual match</dt>
                     <dd>Two colors that <em>look identical</em> can have <strong>wildly different spectra</strong></dd>
-                </dl>
-                <dl class="delayed">
-                    <dt>Color</dt>
-                    <dd>Can be defined with just <strong>three numbers</strong>. Full <em>spectral data</em> is not needed.</dd>
                 </dl>
             </section>
 
@@ -254,11 +258,18 @@
                 </div>
             </section>
 
+            <section class="slide dark definition" id="trichromatic">
+                <dl>
+                    <dt>Color</dt>
+                    <dd>Can be defined with just <strong>three numbers</strong>. Full <em>spectral data</em> is not needed.</dd>
+                </dl>
+            </section>
+
             <section class="slide dark definition" id="XYZ">
                 <dl>
                     <dt>CIE XYZ</dt>
                     <dd class="delayed">Gets rid of the <em>negative numbers</em></dd>
-                    <dd class="delayed">Y is the <em>luminous efficiency function</em></dd>
+                    <dd class="delayed">Y is the <em>luminance</em></dd>
                     <dd class="delayed"><strong>Additive</strong> colorspace</dd>
                 </dl>
             </section>
@@ -325,6 +336,7 @@
                 <p style="margin-left:auto; margin-right: auto; text-align: center;">
                     <img src="img/hsl.svg" alt="HSL diagram" style="height:80vh" />
                 </p>
+                <!-- look for better HSL diagram -->
             </section>
 
             <!-- end of cielab section -->
@@ -338,7 +350,7 @@
             <section class="slide dark definition" id="display-characterization">
                 <dl>
                     <dt>Characterization</dt>
-                    <dd><em>Measure the color</em> of <strong>red</strong>, <strong>green</strong> &amp; <strong>blue</strong> primaries at <em>different intensities</em>.</dd>
+                    <dd><em>Measure the color</em> of <strong>red</strong>, <strong>green</strong> &amp; <strong>blue</strong> at <em>different levels</em> (0…255)</dd>
                 </dl>
             </section>
 
@@ -372,6 +384,12 @@
                 <iframe src="img/dcip3_x3d.html"></iframe>
             </section>
 
+            <!-- slide here saying, as long as the desired color is in gamut it can be produced. But different displays produce different colors for the same rgb values. 
+            
+            maybe the same rgb value on three displays, with patches
+            then next slide
+            the same color patches, on 3 displays, with 3 rgb values -->
+
         </section>
         <!-- end of displays section -->
 
@@ -386,7 +404,7 @@
                     <dd><em>Measure the color</em> of <em>many hundreds 
                       of combinations</em> of <strong>cyan</strong>,
                         <strong>magenta</strong>, <strong>yellow</strong> &amp;
-                        <strong>black</strong> primaries.</dd>
+                        <strong>black</strong>.</dd>
                 </dl>
             </section>
 
@@ -406,7 +424,7 @@
             <section class="slide dark definition" id="ICC-profiles">
                 <dl>
                     <dt>ICC profiles</dt>
-                    <dd>Store the <em>characterization data</em> of a device, allowing
+                    <dd>Store the <em>measured data</em> of a device, allowing
                         <em>conversion</em> to a <strong>profile connection space</strong> (XYZ or Lab).</dd>
                 </dl>
             </section>
@@ -419,6 +437,8 @@
             <header class="image white slide" style="background-image: url(img/woolly.svg);" id="css4color">
                 <h1>CSS4 Color</h1>
             </header>
+
+            <!-- slide here saying, in css4 we can now specify the exact color we want and, if the device can do it, it will be done. -->
 
             <section class="slide" id="css4color-lab">
                 <h1>Lab in CSS Color 4</h1>
@@ -439,12 +459,13 @@ color: lch(32 14.23 45, 1, #F06);</code></pre>
                 <p>Predefined <strong>dci-p3</strong> and <strong>rec2020</strong> wide gamut RGB spaces</p>
                 <pre style="margin-top:12vh"><code class="language-css">background: color(dci-p3, 255 0 127);
 background: color(dci-p3, 64 48 96, 33%);</code></pre>
+                <p class="delayed" style="margin-top:2em">Media Queries 4 can check for DCI P3 support</p>
             </section>
 
             <section class="slide" id="css4color-icc2">
-                <h1>ICC Color in CSS Color 4</h1>
+                <h1>CMYK: ICC Color in CSS Color 4</h1>
                 <p>At-rule (like <em>@font-face</em>) points to ICC profile</p>
-                <pre style="margin-top:12vh"><code class="language-css">background: color(foo, 0 206 190 77);
+                <pre style="margin-top:12vh"><code class="language-css">background: color(foo, 0 206 190 77); 
 @color-profile foo {
     src: url('http://example.org/fooprinter-coated.icc');
 }</code></pre>
