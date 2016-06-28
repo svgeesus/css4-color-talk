@@ -1044,50 +1044,6 @@ div.browser-support {
     visibility: hidden;
 }
 
-#font-variant-numeric,
-#fractions,
-#tabular,
-#ligatures,
-#east-asian,
-#no-fake-bold-italic {
-    padding: 0;
-    text-align: center;
-}
-
-#font-variant-numeric p,
-#fractions p,
-#no-fake-bold-italic p {
-    margin: 0;
-    font-family: LinBio;
-    font-size: 350%;
-}
-
-#tabular table {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: right;
-    font-family: LinBio;
-    font-size: 280%;
-}
-
-#font-variant-numeric pre,
-#fractions pre,
-#tabular pre,
-#ligatures pre,
-#east-asian pre,
-#no-fake-bold-italic pre {
-    margin-top: 1em;
-}
-
-#font-variant-numeric select,
-#fractions select,
-#tabular select,
-#ligatures select,
-#east-asian select,
-#no-fake-bold-italic select {
-    text-align: right;
-}
-
 select {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -1134,4 +1090,21 @@ select {
 
 .gamut iframe.p3 {
     width: 140vh;
+}
+
+.swatches {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.swatches span {
+    display: inline-block;
+    width: 4em;
+    height: 4em;
+}
+
+#links a {
+    text-decoration: none;
+    color: var(--tan)
 }

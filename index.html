@@ -399,6 +399,17 @@
             then next slide
             the same color patches, on 3 displays, with 3 rgb values -->
 
+            <section class="slide dark split-definition" id="ingamut">
+                <dl>
+                    <dt>Device dependent</dt>
+                    <dd>Same RGB value gves different colors on different displays</dd>
+                </dl>
+                <dl class="delayed">
+                    <dt>Device independent</dt>
+                    <dd>Can be displayed accurately, if in gamut</dd>
+                </dl>
+            </section>
+
         </section>
         <!-- end of displays section -->
 
@@ -447,20 +458,52 @@
                 <h1>CSS4 Color</h1>
             </header>
 
-            <!-- slide here saying, in css4 we can now specify the exact color we want and, if the device can do it, it will be done. -->
-
-            <section class="slide" id="css4color-lab">
-                <h1>Lab in CSS Color 4</h1>
-                <pre style="margin-top:12vh"><code class="language-css" >background: lab(50 0 0);
-border-color: lab(65 46 -8, 50%);
-color: lab(32 -24.8 14.23, 1, #F06);</code></pre>
+            <section class="slide dark" id="before">
+                <h1>CSS3 Color</h1>
+                <pre style="margin-top:12vh"><code class="language-css" >fill: rgb(243, 214, 155);
+// looks fine on wide gamut, 
+// too pale on sRGB</code></pre>
+                <p class="swatches"><span style="background-color: rgb(248, 207, 133)"> </span>
+                    <span style="background-color: rgb(243, 214, 155)"> </span></p>
             </section>
+
+            <section class="slide dark" id="MQhack">
+                <h1>MQ4 hack</h1>
+                <pre style="margin-top:12vh"><code class="language-css" >@media dci-p3 {
+  fill: rgb(243, 214, 155);
+}
+// hack in a better match for sRGB
+fill: rgb(248, 207, 133);
+// ewww, really?</code></pre>
+                <p class="swatches"><span style="background-color: rgb(248, 207, 133)"> </span>
+                    <span style="background-color: rgb(248, 207, 133)"> </span></p>
+            </section>
+
+            <section class="slide dark" id="lch_is_better">
+                <h1>LCH is device independent</h1>
+                <pre style="margin-top:12vh"><code class="language-css" >fill: lch(85.5 43.1 79.1);
+// browser calculates rgb for your screen</code></pre>
+                <p class="swatches"><span style="background-color: rgb(248, 207, 133)"> </span>
+                    <span style="background-color: rgb(248, 207, 133)"> </span>
+                    <span style="background-color: rgb(248, 207, 133)"> </span>
+                    <span style="background-color: rgb(248, 207, 133)"> </span>
+                    <span style="background-color: rgb(248, 207, 133)"> </span></p>
+            </section>
+
+            <!-- slide here saying, in css4 we can now specify the exact color we want and, if the device can do it, it will be done. -->
 
             <section class="slide" id="css4color-lch">
                 <h1>LCH in CSS Color 4</h1>
                 <pre style="margin-top:12vh"><code class="language-css">background: lch(50 0 0);
 border-color: lch(65 30 180, 50%);
-color: lch(32 14.23 45, 1, #F06);</code></pre>
+color: lch(55.3 84.5 10.25, 1, #F06);</code></pre>
+            </section>
+
+            <section class="slide" id="css4color-lab">
+                <h1>Lab in CSS Color 4</h1>
+                <pre style="margin-top:12vh"><code class="language-css" >background: lab(50 0 0);
+border-color: lab(65 46 -8, 50%);
+color: lab(55.3 83.1 15.0, 1, #F06);</code></pre>
             </section>
 
             <section class="slide" id="css4color-icc1">
@@ -468,7 +511,7 @@ color: lch(32 14.23 45, 1, #F06);</code></pre>
                 <p>Predefined <strong>dci-p3</strong> and <strong>rec2020</strong> wide gamut RGB spaces</p>
                 <pre style="margin-top:12vh"><code class="language-css">background: color(dci-p3, 255 0 127);
 background: color(dci-p3, 64 48 96, 33%);</code></pre>
-                <p class="delayed" style="margin-top:2em">Media Queries 4 can check for DCI P3 support</p>
+                <p class="delayed" style="margin-top:2em">Media Queries 4 can check for dci-p3 or rec2020 support</p>
             </section>
 
             <section class="slide" id="css4color-icc2">
@@ -518,6 +561,18 @@ background: color(dci-p3, 64 48 96, 33%);</code></pre>
             </section>
             -->
 
+            <footer class="dark slide definition" id="links">
+                <dl><dt>More online</dt>
+                    <dd>
+                        <p>Slides: <a href="https://github.com/svgeesus/evol-css4-color/">github.com/svgeesus/css4-color-talk/</a></p>
+                        <p>Specification: <a href="https://drafts.csswg.org/css-color/">drafts.csswg.org/css-color/</a></p>
+                        <p>Code: <a href="https://drafts.csswg.org/css-color/conversions.js">drafts.csswg.org/css-color/conversions.js</a></p>
+
+                        <p style="font-size: 50%;">CSS Slideshow framework by Lea Verou: <a href="http://github.com/LeaVerou/CSSS">github.com/LeaVerou/CSSS</a></p>
+                    </dd>
+                </dl>
+            </footer>
+
             <footer class="dark slide" id="goodbye">
                 <img src="img/chris-av.jpg" alt="me" />
                 <h1>Thank you!</h1>
@@ -526,9 +581,6 @@ background: color(dci-p3, 64 48 96, 33%);</code></pre>
                     <li><a href="http://svgees.us">svgees.us</a></li>
                     <li><a href="http://twitter.com/svgeesus">@svgeesus</a></li>
                 </ul>
-                <p>Slides: <a href="https://github.com/svgeesus/evol-css4-color/">github.com/svgeesus/css4-color-talk/</a></p>
-                <p>Specification: <a href="https://drafts.csswg.org/css-color/">drafts.csswg.org/css-color/</a></p>
-                <p style="font-size: 50%;">CSS Slideshow framework by Lea Verou: <a href="http://github.com/LeaVerou/CSSS">github.com/LeaVerou/CSSS</a></p>
             </footer>
 
 

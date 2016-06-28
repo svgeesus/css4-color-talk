@@ -1,0 +1,37 @@
+﻿<html>
+	<script src="math.js"></script>
+	<script src="conversions.js"></script>
+	<script>
+	// convert from DCI P3 RGB colors to lch, lab and sRGB
+	// ugly hack, use the console
+	// #F3D69B
+	var p3=[243/255, 214/255, 155/255];
+
+	// linear light then convert to XYZ
+	var xyz = lin_P3_to_XYZ(lin_P3(p3));
+
+	// chromatic adapt to D50, convert to Lab
+	var lab = XYZ_to_Lab(D65_to_D50(xyz));
+	console.log(lab);
+	// 85.49748539729092, 8.12818477227395, 42.35101300361506
+
+	console.log (Lab_to_LCH(lab));
+	// 85.49748539729092, 43.123957264200584, 79.13566270034504
+
+	// XYZ to sRGB
+	var srgb= gam_sRGB(XYZ_to_lin_sRGB(xyz));
+
+	for (var i =0; i<3; i++) {
+		console.log(255 * srgb[i]);
+	}
+	// 247.90843984539782, 206.93914935032868, 132.82467174374912
+	</script>
+	<p>View source and open console</p>
+	<h2>DCI P3 thrown on screen as rgb(243, 214, 155);
+	<div style="width:100px; height: 100px; background-color: rgb(243, 214, 155)">
+	</div>
+	<h2>DCI P3 converted to sRGB - rgb(248, 207, 133)</h2>
+	<div style="width:100px; height: 100px; background-color: rgb(248, 207, 133)">
+	</div>
+
+	</html>
