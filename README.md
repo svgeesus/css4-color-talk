@@ -8,3 +8,7 @@ Dependencies (install at same directory level):
 - Prefixfree https://github.com/LeaVerou/prefixfree
 - PrismJS http://prismjs.com/
 - Incrementable https://github.com/LeaVerou/incrementable
+- 
+
+For a directly viewable slide set, see
+  https://www.w3.org/Talks/2016/css4-color-talk/#intro
