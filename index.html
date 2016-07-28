@@ -495,29 +495,30 @@ fill: rgb(248, 207, 133);
             <section class="slide" id="css4color-lch">
                 <h1>LCH in CSS Color 4</h1>
                 <pre style="margin-top:12vh"><code class="language-css">background: lch(50 0 0);
-border-color: lch(65 30 180, 50%);
-color: lch(55.3 84.5 10.25, 1, #F06);</code></pre>
+border-color: lch(65 30 180 / 50%);
+color: lch(55.3 84.5 10.25, #F06);</code></pre>
             </section>
 
             <section class="slide" id="css4color-lab">
                 <h1>Lab in CSS Color 4</h1>
                 <pre style="margin-top:12vh"><code class="language-css" >background: lab(50 0 0);
-border-color: lab(65 46 -8, 50%);
-color: lab(55.3 83.1 15.0, 1, #F06);</code></pre>
+border-color: lab(65 46 -8 / 50%);
+color: lab(55.3 83.1 15.0 / 75%, #F06);</code></pre>
             </section>
 
             <section class="slide" id="css4color-icc1">
                 <h1>ICC Color in CSS Color 4</h1>
+                <p>Default <strong>sRGB</strong> colorspace</p>
                 <p>Predefined <strong>dci-p3</strong> and <strong>rec2020</strong> wide gamut RGB spaces</p>
-                <pre style="margin-top:12vh"><code class="language-css">background: color(dci-p3, 255 0 127);
-background: color(dci-p3, 64 48 96, 33%);</code></pre>
+                <pre style="margin-top:12vh"><code class="language-css">background: color(dci-p3 1.0 0.0 0.5);
+background: color(dci-p3 .2 .14 .63 / 33%);</code></pre>
                 <p class="delayed" style="margin-top:2em">Media Queries 4 can check for dci-p3 or rec2020 support</p>
             </section>
 
             <section class="slide" id="css4color-icc2">
                 <h1>CMYK: ICC Color in CSS Color 4</h1>
                 <p>At-rule (like <em>@font-face</em>) points to ICC profile</p>
-                <pre style="margin-top:12vh"><code class="language-css">background: color(foo, 0 206 190 77); 
+                <pre style="margin-top:12vh"><code class="language-css">background: color(foo 0 .81 .23 .47); 
 @color-profile foo {
     src: url('http://example.org/fooprinter-coated.icc');
 }</code></pre>
@@ -533,7 +534,7 @@ background: color(dci-p3, 64 48 96, 33%);</code></pre>
 
                 <dl class="delayed">
                     <dt>Shhhh!!!</dt>
-                    <dd><strong>First Public Working Draft</strong>, Tues 5 July 2016 </dd>
+                    <dd><strong>First Public Working Draft</strong>, <a href="https://www.w3.org/TR/2016/WD-css-color-4-20160705/">Tues 5 July 2016</a> </dd>
                 </dl>
                 <!-- end of css4 color section -->
             </section>
