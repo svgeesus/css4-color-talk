@@ -131,8 +131,7 @@
     <polygon class="c" points="0.11 164.439 45.9 164.369 45.97 156.448 55.47 173.149 45.97 188.849 45.97 181.929 0.11 181.929 0.11 164.439 0.11 164.439"/>
     <text class="h" transform="translate(3.778 177.827) scale(0.952 1)">Light</text> 
     <text class="k" transform="translate(255.075 10.303)">choroid</text>
-    <text class="l" transform="translate(106.411 10.303)">ganglion</text>
-    <text class="k" transform="translate(164.364 10.303)">cell</text>
+    <text class="l" transform="translate(106.411 10.303)">ganglion cell</text>
     <text class="m" transform="translate(253.419 41.842)">rod</text>
     <text class="k" transform="translate(220.231 77.756)">cone</text>
 
@@ -162,8 +161,7 @@
     <path class="b" d="M330.2,507.108c1.37,0,2.52,1.73,2.52,3.89,0,2.23-1.15,3.96-2.52,3.96s-2.52-1.73-2.52-3.96c0-2.16,1.15-3.89,2.52-3.89h0Z" transform="translate(-156 -245.76)"/>
     <path class="b" d="M335.03,535.048c1.15,0,2.08,1.72,2.08,3.88,0,2.24-.93,3.96-2.08,3.96-1.08,0-2.02-1.72-2.02-3.96,0-2.16.94-3.88,2.02-3.88h0Z" transform="translate(-156 -245.76)"/>
     <path class="b" d="M332.15,388.308c2.52,0,4.53,3.1,4.53,6.98,0,3.82-2.01,6.99-4.53,6.99-2.45,0-4.54-3.17-4.54-6.99,0-3.88,2.09-6.98,4.54-6.98h0Z" transform="translate(-156 -245.76)"/>
-    <text class="m" transform="translate(127.364 41.842)">horizontal</text>
-    <text class="k" transform="translate(189.77 41.842)">cell</text>
+    <text class="m" transform="translate(127.364 41.842)">horizontal cell</text>
 
   </g>
 </svg>

@@ -70,11 +70,22 @@
                 <li>CSS WG: <a href="https://lists.w3.org/Archives/Member/w3c-ac-members/2001JulSep/0007.html">Chair <span class="de-emphasize">(1997-2002)</span></a>, Staff contact</li>
                 <li><a href="http://www.w3.org/TR/REC-CSS2/">CSS2 co-editor <span class="de-emphasize">(@font-face, descriptors)</span></a></li>
                 <li><a href="http://www.w3.org/TR/css3-color/">CSS3 Color co-editor</a></li>
-                <li><a href="http://www.w3.org/TR/css3-color/">CSS4 Color co-editor</a></li>
+                <li><a href="http://www.w3.org/TR/css4-color/">CSS4 Color co-editor</a></li>
             </ul>
         </section>
 
         <!-- end of hello -->
+
+        <!-- scary syntax slide -->
+         <section class="slide" id="css4color-lch">
+                <h1>LCH in CSS Color 4</h1>
+                <pre style="margin-top:12vh"><code class="language-css">background: lch(50 0 0);
+border-color: lch(65 30 180 / 50%);
+color: lch(55.3 84.5 10.25, #F06);</code></pre>
+            </section>
+            <!-- spend rest of talk explaining *what that does* not *what the syntax is* -->
+            
+
     </section>
 
     <section class="slide darker" id="topics">
@@ -253,6 +264,11 @@
                     <dd>Can be defined with just <strong>three numbers</strong>. Full <em>spectral data</em> is not needed.</dd>
                 </dl>
             </section>
+
+             <section class="slide" data-import="colmatch2"></section>
+
+           
+
 
             <section class="slide dark definition" id="XYZ">
                 <dl>
@@ -492,12 +508,11 @@ fill: rgb(248, 207, 133);
 
             <!-- slide here saying, in css4 we can now specify the exact color we want and, if the device can do it, it will be done. -->
 
-            <section class="slide" id="css4color-lch">
-                <h1>LCH in CSS Color 4</h1>
-                <pre style="margin-top:12vh"><code class="language-css">background: lch(50 0 0);
-border-color: lch(65 30 180 / 50%);
-color: lch(55.3 84.5 10.25, #F06);</code></pre>
-            </section>
+            <!-- no we present this slide again, except the audience understands now. we hope. -->
+
+            <section class="slide" data-import="css4color-lch"></section>
+
+           
 
             <section class="slide" id="css4color-lab">
                 <h1>Lab in CSS Color 4</h1>
@@ -509,16 +524,16 @@ color: lab(55.3 83.1 15.0 / 75%, #F06);</code></pre>
             <section class="slide" id="css4color-icc1">
                 <h1>ICC Color in CSS Color 4</h1>
                 <p>Default <strong>sRGB</strong> colorspace</p>
-                <p>Predefined <strong>dci-p3</strong> and <strong>rec2020</strong> wide gamut RGB spaces</p>
-                <pre style="margin-top:12vh"><code class="language-css">background: color(dci-p3 1.0 0.0 0.5);
-background: color(dci-p3 .2 .14 .63 / 33%);</code></pre>
-                <p class="delayed" style="margin-top:2em">Media Queries 4 can check for dci-p3 or rec2020 support</p>
+                <p>Predefined <strong>display-p3</strong> and <strong>rec2020</strong> wide gamut RGB spaces</p>
+                <pre style="margin-top:12vh"><code class="language-css">background: color(display-p3 1.0 0.0 0.5);
+background: color(display-p3 .2 .14 .63 / 33%);</code></pre>
+                <p class="delayed" style="margin-top:2em">Media Queries 4 can check for p3 or rec2020 support</p>
             </section>
 
             <section class="slide" id="css4color-icc2">
                 <h1>CMYK: ICC Color in CSS Color 4</h1>
                 <p>At-rule (like <em>@font-face</em>) points to ICC profile</p>
-                <pre style="margin-top:12vh"><code class="language-css">background: color(foo 0 .81 .23 .47); 
+                <pre style="margin-top:12vh"><code class="language-css">background: color(foo 0 .81 .23 .47); //cmyk
 @color-profile foo {
     src: url('http://example.org/fooprinter-coated.icc');
 }</code></pre>
@@ -530,10 +545,11 @@ background: color(dci-p3 .2 .14 .63 / 33%);</code></pre>
                 <dl class="delayed">
                     <dt>No.</dt>
                     <dd>This is <em>not</em> in the browsers yet</dd>
+                    <dd class="delayed">Safari Nightly, now</dd>
                 </dl>
 
                 <dl class="delayed">
-                    <dt>Shhhh!!!</dt>
+                    <dt>Early days yet</dt>
                     <dd><strong>First Public Working Draft</strong>, <a href="https://www.w3.org/TR/2016/WD-css-color-4-20160705/">Tues 5 July 2016</a> </dd>
                 </dl>
                 <!-- end of css4 color section -->
