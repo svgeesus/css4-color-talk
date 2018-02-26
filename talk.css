@@ -67,8 +67,8 @@
 #intro h1 {
     position: absolute;
     top: .4em;
-    right: .4em;
-    width: 7em;
+    right: 8vw;
+    width: 8em;
     margin: 0;
     text-align: inherit;
     font-size: 300%;
@@ -78,9 +78,14 @@
     // text-shadow: 3px 3px 3px var(--dark-green);
 }
 
-#intro h1 strong {
+#intro h1.subtitle {
     color: var(--tan);
-    font-size: 112%;
+    font-size: 220%;
+    font-weight: bold;
+    margin: 0;
+    position: absolute;
+    right: 8vw;
+    top: 50vh;
 }
 
 #intro h2 {
@@ -90,7 +95,7 @@
     line-height: 1;
     text-decoration: none;
     position: absolute;
-    right: .8em;
+    right: 8vw;
     bottom: .8em;
     color: inherit;
 }
@@ -1107,4 +1112,10 @@ select {
 #links a {
     text-decoration: none;
     color: var(--tan)
+}
+
+#DSLR p {
+    margin-left: 20vw;
+    margin-right: 20vw;
+    text-align: center;
 }

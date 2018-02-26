@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8" />
+    <script src="math.js"></script>
+    <script src="conversions.js"></script>
+	<script>
+
+// Adapt primaries from D65 to D50 so that ArgyllCMS gamut
+// visualization puts the L axis through the whitepoint :)
+// It seems to ignore chromatic adaptation.
+
+const D50_X = 0.950400000000000;
+const D50_Y = 1.000000000000000;
+const D50_Z = 1.088900000000000;
+var D50white =  math.matrix([D50_X, D50_Y, D50_Z]);
+
+
+// sRGB
+
+// const Red_X =   0.412348487282463;
+// const Red_Y =   0.212617188755020;
+// const Red_Z =   0.019328835341365;
+
+// const Green_X = 0.357601378848728;
+// const Green_Y = 0.715202757697456;
+// const Green_Z = 0.119200459616243;
+
+// const Blue_X =  0.180450133868809;
+// const Blue_Y =  0.072180053547523;
+// const Blue_Z =  0.950370705042392;
+
+// P3
+
+const Red_X =   0.4865709486482162;
+const Red_Y =   0.2289745640697488;
+const Red_Z =   0.0000000000000000;
+
+const Green_X = 0.26566769316909306;
+const Green_Y = 0.6917385218365064;
+const Green_Z = 0.04511338185890264;
+
+const Blue_X =  0.1982172852343625;
+const Blue_Y =  0.079286914093745;
+const Blue_Z =  1.043944368900976;
+
+var Red = [Red_X, Red_Y, Red_Z];
+var Green = [Green_X, Green_Y, Green_Z];
+var Blue = [Blue_X, Blue_Y, Blue_Z];
+var White = [D50_X, D50_Y, D50_Z];
+
+console.log(D65_to_D50(Red));
+console.log(D65_to_D50(Green));
+console.log(D65_to_D50(Blue));
+console.log(D65_to_D50(White));
+
+// sRGB
+// Adapted Red [ 0.4359605513006263, 0.22244623333777772, 0.013928523686382518 ]
+// Adapted Green [ 0.38509212788827546, 0.7169293167547675, 0.0971113866846191 ]
+// Adapted Blue [ 0.14309039499109816, 0.060621181877453856, 0.7142233200689984 ]
+
+// P3
+// Adapted Red [ 0.5150749388462644, 0.2411702073012318, -0.0010486376732522788 ]
+// Adapted Green [ 0.29193972874216134, 0.692235533458147, 0.04188412939347709 ]
+// Adapted Blue [ 0.15717910001035829, 0.06658995392147256, 0.7845458715928453 ]
+
+</script>
+
+
+
+
+

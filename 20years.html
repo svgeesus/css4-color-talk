@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 16px">
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>Color at W3C - 20 years of pain </title>
+    <link href="../csss/slideshow.css" rel="stylesheet" />
+    <link href="../csss/reusable.css" rel="stylesheet" />
+    <link href="theme.css" rel="stylesheet" />
+    <link href="talk.css" rel="stylesheet" />
+    <script src="../prefixfree/prefixfree.min.js"></script>
+
+</head>
+
+<body class="language-css">
+
+    <section id="for-browser" class="dark slide">
+        <h1>Important</h1> This slide deck was created for use in a controlled environment, during a talk. It works best with a recent Firefox at 1920x1080. It WILL LIKELY NOT work correctly in other browsers, due to limited support for css variables at this time. But
+        the other browsers will catch up. Right? Right??!!
+    </section>
+
+    <header id="intro" class="slide">
+        <h1><strong>Color at W3C</strong><br>20 years of pain
+	</h1>
+        <h2><a href="http://svgees.us">Chris Lilley</a> <a href="http://twitter.com/svgeesus" 
+	class="twitter">@svgeesus</a></h2>
+        <p class="attribution"></p>
+    </header>
+
+    <section id="#intro">
+        <section class="slide activity" id="hi">
+            <img id="mypic" src="img/chris-av.jpg" alt="me">
+            <p>Hello! <br /><span class="de-emphasize">I’m Chris or @svgeesus</span></p>
+        </section>
+
+        <section class="slide activity" id="w3c">
+            <img src="img/w3c-logo.svg" />
+            <p><a href="http://www.w3.org/People/#clilley">Technical Director at W3C <br /><span class="de-emphasize">Strategy lead, Core Web Technologies</span></a></p>
+        </section>
+
+        <section class="slide activity" id="svg">
+            <img src="img/svg-logo.svg" />
+            <p><a href="http://www.w3.org/Graphics/SVG/WG/wiki/Secret_Origin_of_SVG#Drivers_and_Deployment">Started SVG <span class="de-emphasize">(1996)</span></a></p>
+            <p><a href="http://www.w3.org/2001/12/tag-pressrelease.html.en">SVG WG Chair <span class="de-emphasize">(1998-2006)</span></a></p>
+        </section>
+
+        <section class="slide activity" id="png">
+            <img src="img/png-icon.png" />
+            <p><a href="http://www.w3.org/TR/PNG/">Co-authored PNG <span class="de-emphasize">(1996)</span></a></p>
+        </section>
+
+        <section class="slide activity" id="webfonts">
+            <h1><span class="web">Web</span>Fonts</h1>
+            <ul>
+                <li>Fonts WG Chair <span class="de-emphasize">(1996-1998)</span></li>
+                <!-- all Member-only, sadly -->
+                <li><a href="http://www.w3.org/Fonts/WG/">WOFF 1.0, WOFF 2.0</a></li>
+                <li><a href="https://www.w3.org/community/svgopentype/">Chromatic Fonts</a></li>
+            </ul>
+        </section>
+
+        <section class="slide activity" id="css">
+            <img src="img/woolly.svg" />
+
+            <ul>
+                <li>CSS WG: <a href="https://lists.w3.org/Archives/Member/w3c-ac-members/2001JulSep/0007.html">Chair <span class="de-emphasize">(1997-2002)</span></a>, Staff contact</li>
+                <li><a href="http://www.w3.org/TR/REC-CSS2/">CSS2 co-editor <span class="de-emphasize">(@font-face, descriptors)</span></a></li>
+                <li><a href="http://www.w3.org/TR/css3-color/">CSS3 Color co-editor</a></li>
+                <li><a href="http://www.w3.org/TR/css4-color/">CSS4 Color co-editor</a></li>
+            </ul>
+        </section>
+
+        <!-- end of hello -->
+
+    </section>
+
+    <section class="slide darker" id="topics">
+        <h1>Topics for today</h1>
+        <ul class="delayed-children">
+            <!-- filled via js -->
+        </ul>
+    </section>
+
+    <section>
+        <header class="image slide" style="background-image: url(img/Dispersive_Prism_Illustration_by_Spigget.jpg);" id="basics">
+            <h1>The Prehistoric Web</h1>
+        </header>
+
+        <section class="image slide" style="background-image: url(img/17_inch_CRT_Monitor.jpg);" id="crt">
+            <h1>CRT monitor</h1>
+        </section>
+
+        <section class="slide dark definition" id="indexed">
+            <dl>
+                <dt>Indexed-color displays</dt>
+                <dd>16 color VGA displays. <strong>256 colors common</strong>.</dd>
+                <dd>“Truecolor” for the lucky few</dd>
+            </dl>
+        </section>
+
+        <section class="slide dark definition" id="gamma">
+            <dl>
+                <dt>Gamma mayhem</dt>
+                <dd class="delayed"><strong>Mac:</strong> 2.6/1.45 = 1.79</dd>
+                <dd  class="delayed"><strong>SGI:</strong> 2.4/1.7 = 1.4</dd>
+                <dd class="delayed"><strong>PC, Unix:</strong> 2.2 (ish)</dd>
+            </dl>
+        </section>
+
+        <section class="image slide top-heavy" style="background-image: url(img/print-workshop.png);" id="printws">
+            <h1>W3C Print Workshop</h1>
+        </section>
+
+        <section class="image slide bottom-heavy" style="background-image: url(img/print-workshop-srgb.png);" id="srgb">
+            <h1>sRGB proposal</h1>
+        </section>
+
+        <section class="image slide bottom-heavy" style="background-image: url(img/css-1.png);" id="css1">
+            <h1>Cascading Style Sheets</h1>
+        </section>
+
+        <section class="image slide bottom-heavy" style="background-image: url(img/css-1-srgb.png);" id="css1srgb">
+            <h1>CSS1 uses sRGB</h1>
+        </section>
+
+    </section>
+
+    <section>
+        <header class="image white slide" style="background-image: url(img/Spyder4Elite_calibrating.jpg); background-position: 50% 50%; background-repeat: no-repeat" id="displays">
+                <h1>Color management</h1>
+        </header>
+
+        <section class="slide dark definition" id="cms">
+                <dl>
+                    <dt>Color Management arrives</dt>
+                    <dd class="delayed"><strong>Mac:</strong> ColorSync</dd>
+                    <dd  class="delayed"><strong>Win95/NT:</strong> KCMS (aftermarket)</dd>
+                    <dd class="delayed"><strong>Win98/2000:</strong> ICM</dd>
+                    <dd class="delayed"><strong>WinXP:</strong> ICM 2.0</dd>
+                    <dd class="delayed"><strong>Linux/GNOME:</strong> GNOME Color Manager</dd>
+                    <dd class="delayed"><strong>Linux/KDE:</strong> colord-kde</dd>
+                </dl>
+        </section>
+
+         <section class="image slide top-heavy" style="background-image: url(img/ColorfulFireworks.png);" id="success">
+                <h1>Success!</h1>
+         </section>
+
+         <section class="image slide top-heavy" style="background-image: url(img/smartphone.jpg);" id="mobile">
+            <h1>Not so fast</h1>
+     </section>
+
+
+    </section>
+
+    <section>
+        <header class="image white slide" style="background-image: url(img/4screens.svg); background-position: 50% 50%; background-repeat: no-repeat" id="cmyk">
+            <h1>Perhaps printing?</h1>
+        </header>
+
+        <section class="slide dark split-definition" id="movetoprint">
+            <dl>
+                <dt>Browsers</dt>
+                <dd>CMS not ubiquitous</dd>
+            </dl>
+            <dl class="delayed">
+                <dt>Printing</dt>
+                <dd>CMS assumed</dd>
+            </dl>
+        </section>
+
+        <section class="image slide top-heavy" style="background-image: url(img/svg-print.png);" 
+        id="svgprint">
+            <h1>SVG Print</h1>
+        </section>
+
+        <section class="image slide top-heavy" style="background-image: url(img/svg-print-color.png);" 
+        id="svgprint-colorint">
+            <h1>color-interpolation</h1>
+        </section>
+
+        <section class="image slide top-heavy" style="background-image: url(img/svg-print-intents.png);" 
+        id="svgprint-rend">
+            <h1>rendering-intent</h1>
+        </section>
+
+        <!-- maybe more screenies? -->
+
+        <section class="image slide" style="background-image: url(img/print-symposium.png);" 
+        id="print-symp">
+            <h1>W3C Print Symposium</h1>
+        </section>
+
+        <section class="image slide" style="background-image: url(img/svg-color.png);" 
+        id="svg-color">
+            <h1>SVG Color</h1>
+        </section>
+
+    </section>
+
+    
+    <section>
+        <header class="image white slide" style="background-image: url(img/Quantum_Dots.jpg);" id="css4color">
+            <h1>CSS Color</h1>
+        </header>
+
+        <section class="image slide top-heavy" style="background-image: url(img/css-color-4.png);" 
+        id="css-color-4">
+            <h1>CSS Color 4</h1>
+        </section>
+
+        <section class="slide dark" id="changed">
+            <h1>What changed?</h1>
+            <ul class="delayed-children">
+                <li>Adobe RGB and the SLR crowd</li>
+                <li>P3 and Apple</li>
+                <li>Wide gamut, HDR TV/movies</li>
+                <li>Mobile CMS</li>
+            </ul>
+        </section>
+
+        <section class="slide dark" id="before">
+            <h1>CSS3 Color</h1>
+            <pre style="margin-top:12vh"><code class="language-css" >fill: rgb(243, 214, 155);
+// looks fine on wide gamut, 
+// too pale on sRGB</code></pre>
+            <p class="swatches"><span style="background-color: rgb(248, 207, 133)"> </span>
+                <span style="background-color: rgb(243, 214, 155)"> </span></p>
+        </section>
+
+        <section class="slide dark" id="MQhack">
+            <h1>MQ4 hack</h1>
+            <pre style="margin-top:12vh"><code class="language-css" >@media dci-p3 {
+fill: rgb(243, 214, 155);
+}
+// hack in a better match for sRGB
+fill: rgb(248, 207, 133);
+// ewww, really?</code></pre>
+            <p class="swatches"><span style="background-color: rgb(248, 207, 133)"> </span>
+                <span style="background-color: rgb(248, 207, 133)"> </span></p>
+        </section>
+
+        <section class="slide dark" id="lch_is_better">
+            <h1>LCH is device independent</h1>
+            <pre style="margin-top:12vh"><code class="language-css" >fill: lch(85.5 43.1 79.1);
+// browser calculates rgb for your screen</code></pre>
+            <p class="swatches"><span style="background-color: rgb(248, 207, 133)"> </span>
+                <span style="background-color: rgb(248, 207, 133)"> </span>
+                <span style="background-color: rgb(248, 207, 133)"> </span>
+                <span style="background-color: rgb(248, 207, 133)"> </span>
+                <span style="background-color: rgb(248, 207, 133)"> </span></p>
+        </section>
+
+        <section class="slide white" id="CIE-CH">
+            <h1>CIE Hue, Chroma (LCH)</h1>
+            <p class="figure" style="margin-top:0; margin-bottom: 0;"><img src="img/Cielab-circle.png" style="height:70vh" /></p>
+        </section>
+       
+     <section class="slide" id="css4color-lch">
+        <h1>LCH in CSS Color 4</h1>
+        <pre style="margin-top:12vh"><code class="language-css">background: lch(50 0 0);
+border-color: lch(65 30 180 / 50%);
+color: lch(55.3 84.5 10.25, #F06);</code></pre>
+    </section>
+
+    <section class="slide dark" id="CIE-ab">
+        <h1>CIE a &amp; b</h1>
+
+        <p style="margin-top: 8vh; margin-left:auto; margin-right: auto; text-align: center;">
+            <img src="img/Lab-a.svg" alt="Lab a scale" style="width:80vw" />
+            <img src="img/Lab-b.svg" alt="Lab b scale" style="width:80vw" />
+
+        </p>
+    </section>
+
+        <section class="slide" id="css4color-lab">
+            <h1>Lab in CSS Color 4</h1>
+            <pre style="margin-top:12vh"><code class="language-css" >background: lab(50 0 0);
+border-color: lab(65 46 -8 / 50%);
+color: lab(55.3 83.1 15.0 / 75%, #F06);</code></pre>
+        </section>
+
+        <section class="slide" id="css4color-icc1">
+            <h1>ICC Color in CSS Color 4</h1>
+            <p>Default <strong>sRGB</strong> colorspace</p>
+            <p>Predefined <strong>display-p3</strong> and <strong>rec2020</strong> wide gamut RGB spaces</p>
+            <pre style="margin-top:12vh"><code class="language-css">background: color(display-p3 1.0 0.0 0.5);
+background: color(display-p3 .2 .14 .63 / 33%);</code></pre>
+            <p class="delayed" style="margin-top:2em">Media Queries 4 can check for p3 or rec2020 support</p>
+        </section>
+
+        <section class="slide" id="css4color-icc2">
+            <h1>CMYK: ICC Color in CSS Color 4</h1>
+            <p>At-rule (like <em>@font-face</em>) points to ICC profile</p>
+            <pre style="margin-top:12vh"><code class="language-css">background: color(foo 0 .81 .23 .47); //cmyk
+@color-profile foo {
+src: url('http://example.org/fooprinter-coated.icc');
+}</code></pre>
+        </section>
+   
+<!--
+
+        <section>
+            <header class="image slide" style="background-image: url(img/Cielab-circle.png);" id="cielab">
+                <h1>CIE Lab</h1>
+            </header>
+
+            <section class="slide" id="CIE-L">
+                <h1>CIE Lightness (L)</h1>
+                <p style="margin-top: 18vh; margin-left:auto; margin-right: auto; text-align: center;">
+                    <img src="img/L-gradient.svg" alt="Luminance scale" style="width:90vw" />
+                </p>
+            </section>
+
+            <section class="slide" id="CIE-Y">
+                <h1>CIE Luminance (Y)</h1>
+                <p style="margin-top: 18vh; margin-left:auto; margin-right: auto; text-align: center;">
+                    <img src="img/Y-gradient.svg" alt="Luminance scale" style="width:90vw" />
+                </p>
+            </section>
+
+            <section class="slide dark" id="CIE-ab">
+                <h1>CIE a &amp; b</h1>
+
+                <p style="margin-top: 8vh; margin-left:auto; margin-right: auto; text-align: center;">
+                    <img src="img/Lab-a.svg" alt="Lab a scale" style="width:80vw" />
+                    <img src="img/Lab-b.svg" alt="Lab b scale" style="width:80vw" />
+
+                </p>
+            </section>
+
+            <section class="slide" id="CIE-Lab">
+                <h1>CIE Lab</h1>
+                <p class="figure" style="margin-top:0; margin-bottom: 0"><img src="img/Lab-Lab.svg" style="height:70vh" /></p>
+            </section>
+
+
+            <section class="slide white" id="CIE-CH">
+                <h1>CIE Hue, Chroma (LCH)</h1>
+                <p class="figure" style="margin-top:0; margin-bottom: 0;"><img src="img/Cielab-circle.png" style="height:70vh" /></p>
+            </section>
+
+        -->
+
+        </section>
+
+        <section>
+            <header class="image white slide" style="background: url(img/vr-ar.jpg) center white no-repeat; background-size: cover;" id="future">
+                <h1>Future challenges</h1>
+            </header>
+
+            <section class="slide dark definition" id="working">
+                <dl>
+                    <dt>Working color space</dt>
+                    <dd><strong>sRGB default</strong>, for Web compatibility</dd>
+                    <dd><strong>scRGB? Lab?</strong></dd>
+                </dl>
+            </section>
+
+            <section class="slide dark definition" id="compose">
+                <dl>
+                    <dt>Compositing</dt>
+                    <dd><strong>sRGB default</strong>, for Web/Photoshop compatibility</dd>
+                    <dd><strong>Porter-Duff compositing operators</strong></dd>
+                </dl>
+            </section>
+
+            <section class="slide dark definition" id="HDR">
+                <dl>
+                    <dt>High Dynamic Range</dt>
+                    <dd>Driven by movie &amp; TV industries</dd>
+                    <dd>Rec.2020, <strong>PQ or HLG</strong> transfer function</dd>
+                    <dd>Compositing SDR &amp; HDR</dd>
+                    <dd>iccMAX for HDR</dd>
+                </dl>
+            </section>
+
+            <section class="slide dark definition" id="review">
+                <dl>
+                    <dt>Expert review</dt>
+                    <dd>W3C <strong>Colorweb Community Group</strong></dd>
+                    <dd>W3C <em>joins ICC</em></dd>
+                </dl>
+            </section>
+
+
+            <footer class="dark slide definition" id="links">
+                <dl><dt>More online</dt>
+                    <dd>
+                        <p>Slides: <a href="https://github.com/svgeesus/evol-css4-color/20years.html">github.com/svgeesus/css4-color-talk/20years.html</a></p>
+                        <p>Specification: <a href="https://drafts.csswg.org/css-color/">drafts.csswg.org/css-color/</a></p>
+                        <p>Code: <a href="https://drafts.csswg.org/css-color/conversions.js">drafts.csswg.org/css-color/conversions.js</a></p>
+
+                        <p style="font-size: 50%;">CSS Slideshow framework by Lea Verou: <a href="http://github.com/LeaVerou/CSSS">github.com/LeaVerou/CSSS</a></p>
+                    </dd>
+                </dl>
+            </footer>
+
+            <footer class="dark slide" id="goodbye">
+                <img src="img/chris-av.jpg" alt="me" />
+                <h1>Thank you!</h1>
+                <ul>
+                    <li><a href="mailto:chris@w3.org">chris@w3.org</a></li>
+                    <li><a href="http://svgees.us">svgees.us</a></li>
+                    <li><a href="http://twitter.com/svgeesus">@svgeesus</a></li>
+                </ul>
+            </footer>
+
+
+
+            <script src="../csss/slideshow.js"></script>
+            <script src="prism.js"></script>
+            <script src="../csss/plugins/css-edit.js"></script>
+            <script src="../csss/plugins/css-snippets.js"></script>
+            <script src="../csss/plugins/css-controls.js"></script>
+            <script src="../incrementable/incrementable.js"></script>
+
+            <script src="talk.js"></script>
+
+</body>
+
+</html>

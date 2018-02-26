@@ -1,0 +1,102 @@
+
+The Prehistoric Web
+
+1994
+
+Indexed-color displays. 16 color VGA. 256 color if you were fancy.
+"True-color" for the lucky few.
+
+Gamma is all over the place
+Apple 2.5/1.45=1.72, SGI 2.4/1.7 = 1.4, and everyone else 2.2
+
+W3C Print Workshop 1996
+sRGB proposal
+
+Hope was that sRGB covers the low end and ICC covers the high end
+Macs had CM 
+Windows, Linux did not
+then PCs got CM that sort of worked
+then they got CM that was better (but not ICC based)
+Linux-Gnome got CM 
+Linux-KDE got CM 
+
+success!
+
+Mobile comes along
+
+no CM 
+
+
+
+
+SVG Print
+2007
+https://www.w3.org/TR/SVGPrintPrimer12/
+https://www.w3.org/TR/SVGPrint12/
+https://www.w3.org/TR/SVGPrint12/#ColorIntroduction
+https://www.w3.org/TR/2007/WD-SVGPrintPrimer12-20070501/images/banner_print.svg
+did not catch on
+
+SVG Color 
+2009
+https://www.w3.org/TR/SVGColor12/
+
+
+
+
+
+ICC color gets added to SVG 2
+
+all color stuff gets removed from SVG2, references CSS3 Color
+
+what is different now
+what changed
+
+Adobe RGB and the SLR crowd
+(too specialized)
+P3 and Apple
+Wide gamut, HDR TV/movies
+Mobile CMS
+
+
+P3 and Apple
+suddenly the cool thing
+ignores P3 whitepoint though
+ignores P3 gamma though
+
+P3 and everyone else
+for movies, with 2.6 gamma
+
+
+
+CSS Color 4
+2015 onwards
+https://drafts.csswg.org/css-color/
+FPWD July 2016
+https://www.w3.org/TR/2016/WD-css-color-4-20160705/
+
+
+Lack of review
+ColorWeb cg 
+W3C joins ICC
+
+
+Working color space
+sRGB for Web Compat, but add other values
+scRGB (but scene referred); Lab?
+
+Compositing
+in gamma-encoded rather than linear space, because Photoshop compatibility
+
+challenges
+color management in VR/AR
+HDR for video and images (stills/HDR photo)
+
+---------------
+
+somewhere
+
+online purchases returned due to unwanted color
+
+
+
