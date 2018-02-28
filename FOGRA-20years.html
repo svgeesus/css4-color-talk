@@ -289,30 +289,35 @@ border-color: goldenrod;
         </section>
 
         <section class="slide black gamut" id="sRGB-gamut">
-                <h1>sRGB gamut</h1>
-                <iframe src="img/sRGB2014-D50.x3d.html"></iframe>
-            </section>
+            <h1>sRGB gamut</h1>
+            <iframe src="img/sRGB2014-D50.x3d.html"></iframe>
+        </section>
 
-            <section class="slide black gamut" id="mba-gamut">
-                <h1>2013 MacBook Air</h1>
-                <iframe src="img/MBA2013.x3d.html"></iframe>
-            </section>
+        <section class="slide black gamut" id="mba-gamut">
+            <h1>2013 MacBook Air</h1>
+            <iframe src="img/MBA2013.x3d.html"></iframe>
+        </section>
 
-            <section class="slide black gamut p3" id="dcip3-gamut">
-                <h1>Display P3 gamut</h1>
-                <iframe src="img/hackedDisplayP3-D50.x3d.html"></iframe>
-            </section>
+        <section class="slide black gamut" id="FOGRA39-gamut">
+            <h1>FOGRA 39</h1>
+            <iframe src="img/Coated_Fogra39L_VIGC_300.x3d.html"></iframe>
+        </section>
 
-            <section class="slide dark split-definition" id="mobileCMS">
-                <dl>
-                    <dt>iOS 9.3</dt>
-                    <dd>Colorsync</dd>
-                </dl>
-                <dl class="delayed">
-                    <dt>Android Oreo</dt>
-                    <dd>CMS started</dd>
-                </dl>
-            </section>
+        <section class="slide black gamut p3" id="dcip3-gamut">
+            <h1>Display P3 gamut</h1>
+            <iframe src="img/hackedDisplayP3-D50.x3d.html"></iframe>
+        </section>
+
+        <section class="slide dark split-definition" id="mobileCMS">
+            <dl>
+                <dt>iOS 9.3</dt>
+                <dd>Colorsync</dd>
+            </dl>
+            <dl class="delayed">
+                <dt>Android Oreo</dt>
+                <dd>CMS (started)</dd>
+            </dl>
+        </section>
 <!--
         <section class="slide dark" id="MQhack">
             <h1>MQ4 hack</h1>
@@ -409,7 +414,7 @@ background: color(image-p3 .2 .14 .63 / 33%);</code></pre>
 
         <section class="slide" id="css4color-icc2">
             <h1>CMYK: ICC Color in CSS Color 4</h1>
-            <p>At-rule points to ICC profile</p>
+            <p>Not restricted to 3-primary colorspaces</p>
             <!--
             $ TransICC -o Coated_Fogra39L_VIGC_300.icc
             LittleCMS ColorSpace conversion calculator - 4.3 [LittleCMS 2.09]
@@ -425,13 +430,13 @@ background: color(image-p3 .2 .14 .63 / 33%);</code></pre>
             <pre style="margin-top:12vh"><code class="language-css">background: color(CF39 .043931 .153460 .451743 0);
 // Type 1 coated FOGRA 39 cmyk
 @color-profile CF39 {
-    src: url('http://example.org/Coated_Fogra39L_VIGC_300.icc');
+    src: url('http://example.org/C_Fogra39L.icc');
 }</code></pre>
         </section>
 
         <section class="slide" id="css4color-icc3">
             <h1>CMYKOGV: ICC Color in CSS Color 4</h1>
-            <p>At-rule points to ICC profile</p>
+            <p>Not restricted to 4-primary colorspaces, either</p>
             <!--
             $ TransICC -o '7C_Chart_3003_i1Profiler-FOGRA55_beta_CMYKOGV_Orange34_Green7_Violet23_V1_2018_02_23_Default - MultiColor-748254709.icm'
             LittleCMS ColorSpace conversion calculator - 4.3 [LittleCMS 2.09]
@@ -451,7 +456,19 @@ background: color(image-p3 .2 .14 .63 / 33%);</code></pre>
 @color-profile F55 {
     src: url('http://example.org/FOGRA55beta.icc');
 }</code></pre>
-            </section>
+        </section>
+
+        <section class="slide" id="css4color-icc4">
+                <h1>ICC Named Colors in CSS Color 4</h1>
+                <p>Hello, Munich!</p>
+
+                <pre style="margin-top:12vh"><code class="language-css">background: color(hallo "München");
+
+    // A named color profile
+    @color-profile hallo {
+        src: url('http://example.org/SomeNames.icc');
+    }</code></pre>
+                </section>
 
             <section class="slide dark definition" id="working">
                     <dl>
@@ -506,7 +523,20 @@ function lin_sRGB_to_XYZ(rgb) {
 }
                 </code></pre>
             </section>
+<!--
+    sRGB 2014
+    Total volume of gamut is 820,993.377524 cubic colorspace units
 
+    FOGRA 39
+    Total ink limit assumed is 300%
+    Total volume of gamut is 402,054.824369 cubic colorspace units
+
+    Rec.2020
+    Total volume of gamut is 1,233,095.150786 cubic colorspace units
+
+
+    iccgamut does not support v4 profiles
+-->
         </section>
 
         <section>
@@ -518,6 +548,7 @@ function lin_sRGB_to_XYZ(rgb) {
             <section class="slide dark definition" id="compose">
                 <dl class="delayed-children">
                     <dt>Compositing</dt>
+                    <dd><a href="https://drafts.fxtf.org/compositing-1/">https://drafts.fxtf.org/compositing-1/</a></dd>
                     <dd><strong>sRGB default</strong>, for Web/Photoshop compatibility</dd>
                     <dd><strong>Standard source-over compositing in working colorspace</strong></dd>
                     <dd><strong>Porter-Duff compositing operators</strong></dd>
@@ -528,11 +559,61 @@ function lin_sRGB_to_XYZ(rgb) {
                 <dl  class="delayed-children">
                     <dt>High Dynamic Range</dt>
                     <dd>Driven by movie &amp; TV industries</dd>
-                    <dd>Rec.2020, <strong>PQ or HLG</strong> transfer function</dd>
-                    <dd>Compositing SDR &amp; HDR</dd>
-                    <dd>iccMAX for HDR</dd>
+                    <dd>Rec.2020, ultrawide (unachievable!) gamut</dd>
+                    <dd><strong>PQ or HLG</strong> transfer function</dd>
                 </dl>
             </section>
+
+            <section class="slide black gamut" id="Rec.2020-gamut">
+                    <h1>Rec.2020 gamut</h1>
+                    <iframe src="img/hacked2020-D50.x3d.html"></iframe>
+            </section>
+
+            <section class="slide image" id="dynamics" style="background-image: url(img/UHD-HDR-SDR-Auge-en.jpg);"></section>
+
+            <section class="slide dark" id="peaks">
+                    <h1>Peak luminance (not paper white)</h1>
+                    <table>
+                        <tr>
+                            <th>Standard</th>
+                            <th>Peak luminance, cd/m<sup>2</sup></th>
+                        </tr>
+                        <tr>
+                            <td>DCI P3</td>
+                            <td>48</td>
+                        </tr>
+                        <tr>
+                            <td>sRGB</td>
+                            <td>80</td>
+                        </tr>
+                        <tr>
+                            <td>SDR TV</td>
+                            <td>300</td>
+                        </tr>
+                        <tr>
+                            <td>Mobile device</td>
+                            <td>800</td>
+                        </tr>
+                        <tr>
+                            <td>UHD Grading monitor</td>
+                            <td>4,000</td>
+                        </tr>
+                        <tr>
+                            <td>Rec.2020 PQ</td>
+                            <td>10,000</td>
+                        </tr>
+                    </table>
+            </section>
+
+            <section class="slide dark definition" id="HDR2">
+                    <dl  class="delayed-children">
+                        <dt>Current Work</dt>
+                        <dd>Scene-referred <em>vs.</em> display-referred</dd>
+                        <dd>Re-rendering for bright (non-cinema!) environments</dd>
+                        <dd>Compositing SDR &amp; HDR</dd>
+                        <dd>iccMAX for HDR</dd>
+                    </dl>
+                </section>
 
             <section class="slide dark definition" id="review">
                 <dl>
@@ -546,7 +627,7 @@ function lin_sRGB_to_XYZ(rgb) {
             <footer class="dark slide definition" id="links">
                 <dl><dt>More online</dt>
                     <dd>
-                        <p>Slides: <a href=""></a></p>
+                        <p>Slides: <a href="https://www.w3.org/Talks/2018/Lilley-FOGRA">w3.org/Talks/2018/Lilley-FOGRA</a></p>
                         <p>and on GitHub: <a href="https://github.com/svgeesus/evol-css4-color/">github.com/svgeesus/css4-color-talk/</a></p>
                         <p>Specification: <a href="https://drafts.csswg.org/css-color/">drafts.csswg.org/css-color/</a></p>
                         <p>Code: <a href="https://drafts.csswg.org/css-color/conversions.js">drafts.csswg.org/css-color/conversions.js</a></p>

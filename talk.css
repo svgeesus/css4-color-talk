@@ -1127,3 +1127,17 @@ select {
     margin-right: 20vw;
     text-align: center;
 }
+
+#peaks table {
+    margin-left: auto; margin-right: auto
+}
+
+#peaks table th {
+    color: var(--tan);
+}
+
+    #peaks table td:first-child,
+    #peaks table th:first-child  {
+        text-align: right;
+        padding-right: 3em;
+    }
