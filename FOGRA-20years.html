@@ -400,7 +400,7 @@ background: color(image-p3 .2 .14 .63 / 33%);</code></pre>
                 R=216.0656 G=206.5432 B=148.3735
             -->
 
-<pre style="margin-top:12vh"><code class="language-css">background: color(PP 0.84731607843137 );
+<pre style="margin-top:12vh"><code class="language-css">background: color(PP 0.84731 0.809973 0.581856 );
 // Pro-photo RGB space
 @color-profile PP {
     src: url('http://example.org/ProPhotoRGB.icc');
@@ -453,49 +453,59 @@ background: color(image-p3 .2 .14 .63 / 33%);</code></pre>
 }</code></pre>
             </section>
 
-<!--
+            <section class="slide dark definition" id="working">
+                    <dl>
+                        <dt>Working color space</dt>
+                        <dd><strong>sRGB default</strong>, for Web compatibility</dd>
+                        <dd><strong>scRGB? CIE XYZ?</strong></dd>
+                        <dd><strong>CIE Lab</strong></dd>
+                    </dl>
+                </section>
 
-        <section>
-            <header class="image slide" style="background-image: url(img/Cielab-circle.png);" id="cielab">
-                <h1>CIE Lab</h1>
-            </header>
+            <section class="slide dark" id="js">
+                <h1>Sample JavaScript code</h1>
+                <pre style="margin-top:12vh"><code class="language-js">function D65_to_D50(XYZ) {
+    // Bradford chromatic adaptation from D65 to D50
+    // The matrix below is the result of three operations:
+    // - convert from XYZ to retinal cone domain
+    // - scale components from one reference white to another
+    // - convert back to XYZ
+    // http://www.brucelindbloom.com/index.html?Eqn_ChromAdapt.html
+    var M = math.matrix([
+        [ 1.0478112,  0.0228866, -0.0501270],
+        [ 0.0295424,  0.9904844, -0.0170491],
+        [-0.0092345,  0.0150436,  0.7521316]
+        ]);
 
-            <section class="slide" id="CIE-L">
-                <h1>CIE Lightness (L)</h1>
-                <p style="margin-top: 18vh; margin-left:auto; margin-right: auto; text-align: center;">
-                    <img src="img/L-gradient.svg" alt="Luminance scale" style="width:90vw" />
-                </p>
+    return math.multiply(M, XYZ).valueOf();
+}
+function gam_sRGB(RGB) {
+    // convert an array of linear-light sRGB values in the range 0.0-1.0
+    // to gamma corrected form
+    // https://en.wikipedia.org/wiki/SRGB
+    return RGB.map(function (val) {
+        if (val > 0.0031308) {
+            return 1.055 * Math.pow(val, 1/2.4) - 0.055;
+        }
+
+        return 12.92 * val;
+    });
+}
+
+function lin_sRGB_to_XYZ(rgb) {
+    // convert an array of linear-light sRGB values to CIE XYZ
+    // using sRGB's own white, D65 (no chromatic adaptation)
+    // http://www.brucelindbloom.com/index.html?Eqn_RGB_XYZ_Matrix.html
+    var M = math.matrix([
+        [0.4124564,  0.3575761,  0.1804375],
+        [0.2126729,  0.7151522,  0.0721750],
+        [0.0193339,  0.1191920,  0.9503041]
+    ]);
+
+    return math.multiply(M, rgb).valueOf();
+}
+                </code></pre>
             </section>
-
-            <section class="slide" id="CIE-Y">
-                <h1>CIE Luminance (Y)</h1>
-                <p style="margin-top: 18vh; margin-left:auto; margin-right: auto; text-align: center;">
-                    <img src="img/Y-gradient.svg" alt="Luminance scale" style="width:90vw" />
-                </p>
-            </section>
-
-            <section class="slide dark" id="CIE-ab">
-                <h1>CIE a &amp; b</h1>
-
-                <p style="margin-top: 8vh; margin-left:auto; margin-right: auto; text-align: center;">
-                    <img src="img/Lab-a.svg" alt="Lab a scale" style="width:80vw" />
-                    <img src="img/Lab-b.svg" alt="Lab b scale" style="width:80vw" />
-
-                </p>
-            </section>
-
-            <section class="slide" id="CIE-Lab">
-                <h1>CIE Lab</h1>
-                <p class="figure" style="margin-top:0; margin-bottom: 0"><img src="img/Lab-Lab.svg" style="height:70vh" /></p>
-            </section>
-
-
-            <section class="slide white" id="CIE-CH">
-                <h1>CIE Hue, Chroma (LCH)</h1>
-                <p class="figure" style="margin-top:0; margin-bottom: 0;"><img src="img/Cielab-circle.png" style="height:70vh" /></p>
-            </section>
-
-        -->
 
         </section>
 
@@ -504,24 +514,18 @@ background: color(image-p3 .2 .14 .63 / 33%);</code></pre>
                 <h1>Future challenges</h1>
             </header>
 
-            <section class="slide dark definition" id="working">
-                <dl>
-                    <dt>Working color space</dt>
-                    <dd><strong>sRGB default</strong>, for Web compatibility</dd>
-                    <dd><strong>scRGB? Lab?</strong></dd>
-                </dl>
-            </section>
 
             <section class="slide dark definition" id="compose">
-                <dl>
+                <dl class="delayed-children">
                     <dt>Compositing</dt>
                     <dd><strong>sRGB default</strong>, for Web/Photoshop compatibility</dd>
+                    <dd><strong>Standard source-over compositing in working colorspace</strong></dd>
                     <dd><strong>Porter-Duff compositing operators</strong></dd>
                 </dl>
             </section>
 
             <section class="slide dark definition" id="HDR">
-                <dl>
+                <dl  class="delayed-children">
                     <dt>High Dynamic Range</dt>
                     <dd>Driven by movie &amp; TV industries</dd>
                     <dd>Rec.2020, <strong>PQ or HLG</strong> transfer function</dd>
@@ -534,7 +538,7 @@ background: color(image-p3 .2 .14 .63 / 33%);</code></pre>
                 <dl>
                     <dt>Expert review</dt>
                     <dd>W3C <strong>Colorweb Community Group</strong></dd>
-                    <dd>W3C <em>joins ICC</em></dd>
+                    <dd>W3C <em>joined ICC</em> in 2017</dd>
                 </dl>
             </section>
 
@@ -542,7 +546,8 @@ background: color(image-p3 .2 .14 .63 / 33%);</code></pre>
             <footer class="dark slide definition" id="links">
                 <dl><dt>More online</dt>
                     <dd>
-                        <p>Slides: <a href="https://github.com/svgeesus/evol-css4-color/20years.html">github.com/svgeesus/css4-color-talk/20years.html</a></p>
+                        <p>Slides: <a href=""></a></p>
+                        <p>and on GitHub: <a href="https://github.com/svgeesus/evol-css4-color/">github.com/svgeesus/css4-color-talk/</a></p>
                         <p>Specification: <a href="https://drafts.csswg.org/css-color/">drafts.csswg.org/css-color/</a></p>
                         <p>Code: <a href="https://drafts.csswg.org/css-color/conversions.js">drafts.csswg.org/css-color/conversions.js</a></p>
 
