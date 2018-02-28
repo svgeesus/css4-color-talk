@@ -216,37 +216,49 @@
             <h1>CSS Color 3 features</h1>
         </section>
 
+        <section class="slide" id="HSL">
+                <h1>And now HSL too</h1>
+                <p class="figure" style="margin-top:0; margin-bottom: 0;">
+                    <img src="img/hsl.svg" alt="HSL diagram" style="height:70vh" />
+                </p>
+                <!-- look for better HSL diagram -->
+            </section>
+
         <!-- fix this so it shows more syntax and less variability;
             then do the variability later -->
         <section class="slide dark" id="css3-color-example">
             <h1>CSS3 Color</h1>
             <pre style="margin-top:12vh"><code class="language-css" >fill: rgb(243, 214, 155);
-// looks fine on wide gamut,
-// too pale on sRGB</code></pre>
-            <p class="swatches"><span style="background-color: rgb(248, 207, 133)"> </span>
-                <span style="background-color: rgb(243, 214, 155)"> </span></p>
+background: hsl(225deg, 45%, 60%);
+border-color: goldenrod;
+</code></pre>
+            <p class="swatches"><span style="background-color: rgb(243, 214, 155)"> </span>
+                <span style="background-color: hsl(275deg, 45%, 60%);"> </span>
+                <span style="background-color: goldenrod"> </span></p>
         </section>
 
-        <section class="slide" id="HSL">
-            <h1>And now HSL too</h1>
-            <p class="figure" style="margin-top:0; margin-bottom: 0;">
-                <img src="img/hsl.svg" alt="HSL diagram" style="height:70vh" />
-            </p>
-            <!-- look for better HSL diagram -->
-        </section>
+
 
         <section class="image slide bottom-heavy" style="background-image: url(img/css3-color-dropped.png);"
         id="css-color-3-dropped">
             <h1>Dropped from CSS Color 3</h1>
         </section>
 
+        <section class="image slide top-heavy" style="background-image: url(img/sad.jpg" id="sadness">
+        <h1>Sadness</h1></section>
+
         <section class="image slide top-heavy" style="background-image: url(img/css-color-4.png);"
         id="css-color-4">
             <h1>CSS Color 4</h1>
         </section>
 
+        <section class="slide image bottom-heavy" style="background-image: url(img/css-color-4-features.png"
+        id="css4-features">
+            <h1>CSS Color 4 features</h1>
+        </section>
+
         <section class="slide dark" id="changed">
-            <h1>What changed?</h1>
+            <h1>Wait - what changed?</h1>
             <ul class="delayed-children">
                 <li>Adobe RGB and the SLR crowd</li>
                 <li>P3 and Apple</li>
@@ -275,6 +287,21 @@
                 <li>D65 white point</li>
             </ul>
         </section>
+
+        <section class="slide dark gamut" id="sRGB-gamut">
+                <h1>sRGB gamut</h1>
+                <iframe src="img/sRGB2014-D50.x3d.html"></iframe>
+            </section>
+
+            <section class="slide dark gamut" id="mba-gamut">
+                <h1>2013 MacBook Air</h1>
+                <iframe src="img/MBA2013.x3d.html"></iframe>
+            </section>
+
+            <section class="slide dark gamut p3" id="dcip3-gamut">
+                <h1>DCI P3 gamut</h1>
+                <iframe src="img/hackedDisplayP3-D50.x3d.html"></iframe>
+            </section>
 <!--
         <section class="slide dark" id="MQhack">
             <h1>MQ4 hack</h1>
@@ -289,7 +316,10 @@ fill: rgb(248, 207, 133);
         </section>
     -->
 
-
+<!--
+    <p class="swatches"><span style="background-color: rgb(248, 207, 133)"> </span>
+                <span style="background-color: rgb(243, 214, 155)"> </span></p>
+    -->
 
         <section class="slide white" id="CIE-CH">
             <h1>CIE Hue, Chroma (LCH)</h1>
