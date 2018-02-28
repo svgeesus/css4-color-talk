@@ -387,8 +387,21 @@ background: color(image-p3 .2 .14 .63 / 33%);</code></pre>
         <section class="slide" id="customRGB">
             <h1>Custom RGB Colorspaces</h1>
             <p>At-rule (like <em>@font-face</em>) points to ICC profile </p>
-<pre style="margin-top:12vh"><code class="language-css">background: color(PP .81 .23 .47);
-//Pro-photo RGB space
+            <!--
+                $ TransICC -o ProPhoto.icc
+                LittleCMS ColorSpace conversion calculator - 4.3 [LittleCMS 2.09]
+
+                Enter values, 'q' to quit
+
+                R? 243
+                G? 214
+                B? 155
+
+                R=216.0656 G=206.5432 B=148.3735
+            -->
+
+<pre style="margin-top:12vh"><code class="language-css">background: color(PP 0.84731607843137 );
+// Pro-photo RGB space
 @color-profile PP {
     src: url('http://example.org/ProPhotoRGB.icc');
 }</code></pre>
@@ -397,18 +410,44 @@ background: color(image-p3 .2 .14 .63 / 33%);</code></pre>
         <section class="slide" id="css4color-icc2">
             <h1>CMYK: ICC Color in CSS Color 4</h1>
             <p>At-rule points to ICC profile</p>
-            <pre style="margin-top:12vh"><code class="language-css">background: color(foo 0 .81 .23 .47);
-//cmyk
-@color-profile foo {
-    src: url('http://example.org/fooprinter-coated.icc');
+            <!--
+            $ TransICC -o Coated_Fogra39L_VIGC_300.icc
+            LittleCMS ColorSpace conversion calculator - 4.3 [LittleCMS 2.09]
+
+            Enter values, 'q' to quit
+            R? 243
+            G? 214
+            B? 155
+
+            C=4.3931 M=15.3460 Y=45.1743 K=0.0000
+            -->
+
+            <pre style="margin-top:12vh"><code class="language-css">background: color(CF39 .043931 .153460 .451743 0);
+// Type 1 coated FOGRA 39 cmyk
+@color-profile CF39 {
+    src: url('http://example.org/Coated_Fogra39L_VIGC_300.icc');
 }</code></pre>
         </section>
 
-        <section class="slide" id="css4color-icc2">
-                <h1>CMYKOGV: ICC Color in CSS Color 4</h1>
-                <p>At-rule points to ICC profile</p>
-                <pre style="margin-top:12vh"><code class="language-css">background: color(F55 0 .81 .23 .47);
-//Fogra55beta
+        <section class="slide" id="css4color-icc3">
+            <h1>CMYKOGV: ICC Color in CSS Color 4</h1>
+            <p>At-rule points to ICC profile</p>
+            <!--
+            $ TransICC -o '7C_Chart_3003_i1Profiler-FOGRA55_beta_CMYKOGV_Orange34_Green7_Violet23_V1_2018_02_23_Default - MultiColor-748254709.icm'
+            LittleCMS ColorSpace conversion calculator - 4.3 [LittleCMS 2.09]
+
+            Enter values, 'q' to quit
+            R? 243
+            G? 214
+            B? 155
+
+            Cyan=2.0630 Magenta=2.6108 Yellow=35.4391 Black=0.0000
+            "Orange=12.8435        "Green=4.6815    "Violet=0.8667
+            -->
+            <pre style="margin-top:12vh"><code class="language-css">background: color(F55 .020630 .026108 .354391
+    0 .128435 .046815 .008667);
+
+// FOGRA 55beta, CMYK Orange32 Green7 Violet23
 @color-profile F55 {
     src: url('http://example.org/FOGRA55beta.icc');
 }</code></pre>
