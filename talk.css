@@ -54,7 +54,7 @@
     background: #333;
     background-image: linear-gradient(to left, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), linear-gradient(to left, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5));
     background-repeat: no-repeat;
-    background-size: 1920px 1080px;
+    background-size: 3840px 2160px;
 }
 
 #intro {
@@ -1085,17 +1085,25 @@ select {
 
 .gamut:not(:target) {}
 
-.gamut iframe {
-    height: 80vh;
-    margin: auto;
-    display: block;
-    width: 120vh;
-    background: black;
+.gamut h1 {
+    position: absolute;
+    top: 5vh;
+    left: 5vw;
+    z-index: 100;
 }
 
-.gamut iframe.p3 {
-    width: 140vh;
+.gamut iframe {
+    height: 90vh;
+    margin: 0;
+    display: block;
+    width: 90vw;
+    background: black;
+    overflow: hidden;
 }
+
+/* .gamut iframe.p3 {
+    width: 80vw;
+} */
 
 .swatches {
     margin-left: auto;

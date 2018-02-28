@@ -282,25 +282,36 @@ border-color: goldenrod;
             <h1>Apple Display P3</h1>
             <ul class="delayed-children">
                 <li>Primaries from DCI P3</li>
-                <li>Same transfer curve as sRGB</li>
-                <li>Same viewing conditions as sRGB</li>
+                <li>2.2 gamma (rather than 2.6)</li>
                 <li>D65 white point</li>
+                <li>Same viewing conditions as sRGB</li>
             </ul>
         </section>
 
-        <section class="slide dark gamut" id="sRGB-gamut">
+        <section class="slide black gamut" id="sRGB-gamut">
                 <h1>sRGB gamut</h1>
                 <iframe src="img/sRGB2014-D50.x3d.html"></iframe>
             </section>
 
-            <section class="slide dark gamut" id="mba-gamut">
+            <section class="slide black gamut" id="mba-gamut">
                 <h1>2013 MacBook Air</h1>
                 <iframe src="img/MBA2013.x3d.html"></iframe>
             </section>
 
-            <section class="slide dark gamut p3" id="dcip3-gamut">
-                <h1>DCI P3 gamut</h1>
+            <section class="slide black gamut p3" id="dcip3-gamut">
+                <h1>Display P3 gamut</h1>
                 <iframe src="img/hackedDisplayP3-D50.x3d.html"></iframe>
+            </section>
+
+            <section class="slide dark split-definition" id="mobileCMS">
+                <dl>
+                    <dt>iOS 9.3</dt>
+                    <dd>Colorsync</dd>
+                </dl>
+                <dl class="delayed">
+                    <dt>Android Oreo</dt>
+                    <dd>CMS started</dd>
+                </dl>
             </section>
 <!--
         <section class="slide dark" id="MQhack">
@@ -319,7 +330,10 @@ fill: rgb(248, 207, 133);
 <!--
     <p class="swatches"><span style="background-color: rgb(248, 207, 133)"> </span>
                 <span style="background-color: rgb(243, 214, 155)"> </span></p>
+
     -->
+
+    <section class="slide" data-import="css4-features"></section>
 
         <section class="slide white" id="CIE-CH">
             <h1>CIE Hue, Chroma (LCH)</h1>
@@ -333,7 +347,7 @@ border-color: lch(65 30 180 / 50%);
 color: lch(55.3 84.5 10.25, #F06);</code></pre>
     </section>
 
-    <section class="slide dark" id="lch_is_better">
+    <!-- <section class="slide dark" id="lch_is_better">
         <h1>LCH is device independent</h1>
         <pre style="margin-top:12vh"><code class="language-css" >fill: lch(85.5 43.1 79.1);
 // browser calculates rgb for your screen</code></pre>
@@ -342,7 +356,7 @@ color: lch(55.3 84.5 10.25, #F06);</code></pre>
             <span style="background-color: rgb(248, 207, 133)"> </span>
             <span style="background-color: rgb(248, 207, 133)"> </span>
             <span style="background-color: rgb(248, 207, 133)"> </span></p>
-    </section>
+    </section> -->
 
     <section class="slide dark" id="CIE-ab">
         <h1>CIE a &amp; b</h1>
@@ -362,22 +376,43 @@ color: lab(55.3 83.1 15.0 / 75%, #F06);</code></pre>
         </section>
 
         <section class="slide" id="css4color-icc1">
-            <h1>ICC Color in CSS Color 4</h1>
+            <h1>Predefined RGB Colorspaces</h1>
             <p>Default <strong>sRGB</strong> colorspace</p>
-            <p>Predefined <strong>display-p3</strong> and <strong>rec2020</strong> wide gamut RGB spaces</p>
-            <pre style="margin-top:12vh"><code class="language-css">background: color(display-p3 1.0 0.0 0.5);
-background: color(display-p3 .2 .14 .63 / 33%);</code></pre>
+            <p>Predefined <strong>image-p3</strong> and <strong>rec2020</strong> wide gamut RGB spaces</p>
+            <pre style="margin-top:12vh"><code class="language-css">background: color(image-p3 1.0 0.0 0.5);
+background: color(image-p3 .2 .14 .63 / 33%);</code></pre>
             <p class="delayed" style="margin-top:2em">Media Queries 4 can check for p3 or rec2020 support</p>
+        </section>
+
+        <section class="slide" id="customRGB">
+            <h1>Custom RGB Colorspaces</h1>
+            <p>At-rule (like <em>@font-face</em>) points to ICC profile </p>
+<pre style="margin-top:12vh"><code class="language-css">background: color(PP .81 .23 .47);
+//Pro-photo RGB space
+@color-profile PP {
+    src: url('http://example.org/ProPhotoRGB.icc');
+}</code></pre>
         </section>
 
         <section class="slide" id="css4color-icc2">
             <h1>CMYK: ICC Color in CSS Color 4</h1>
-            <p>At-rule (like <em>@font-face</em>) points to ICC profile</p>
-            <pre style="margin-top:12vh"><code class="language-css">background: color(foo 0 .81 .23 .47); //cmyk
+            <p>At-rule points to ICC profile</p>
+            <pre style="margin-top:12vh"><code class="language-css">background: color(foo 0 .81 .23 .47);
+//cmyk
 @color-profile foo {
-src: url('http://example.org/fooprinter-coated.icc');
+    src: url('http://example.org/fooprinter-coated.icc');
 }</code></pre>
         </section>
+
+        <section class="slide" id="css4color-icc2">
+                <h1>CMYKOGV: ICC Color in CSS Color 4</h1>
+                <p>At-rule points to ICC profile</p>
+                <pre style="margin-top:12vh"><code class="language-css">background: color(F55 0 .81 .23 .47);
+//Fogra55beta
+@color-profile F55 {
+    src: url('http://example.org/FOGRA55beta.icc');
+}</code></pre>
+            </section>
 
 <!--
 
